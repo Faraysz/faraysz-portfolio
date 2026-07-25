@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faraysz — Full Stack Dev</title>
+<meta name="description" content="Portofolio Faraytodi Atmajaya (Faraysz) — Full Stack Engineer: Laravel, React Native, Flutter, Machine Learning." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body data-page="home">
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand"><span class="bracket">&lt;/&gt;</span> Faraysz</a>
+    <nav class="navbar__links">
+      <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
+      <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+    </nav>
+    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <button class="navbar__toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="navbar__mobile">
+    <a href="index.html" data-nav="home">Beranda</a>
+    <a href="projects.html" data-nav="projects">Proyek</a>
+    <a href="stack.html" data-nav="stack">Stack</a>
+    <a href="about.html" data-nav="about">Tentang</a>
+    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section style="padding-top:160px; position:relative; overflow:hidden;">
+    <div class="glow-blob float-slow" style="width:420px;height:420px;top:-120px;right:-100px;background:var(--cyan);opacity:0.10;"></div>
+    <div class="glow-blob float" style="width:340px;height:340px;bottom:-100px;left:-80px;background:var(--violet);opacity:0.12;"></div>
+    <div class="container">
+      <div class="reveal is-visible">
+        <span class="eyebrow mono" data-typewriter='["fullstack_dev{}", "laravel", "react_native", "machine_learning_enthusiast"]'>fullstack_engineer()</span>
+      </div>
+      <h1 class="reveal is-visible" style="font-size:clamp(34px,6vw,58px); line-height:1.08; margin-top:20px; max-width:820px;">
+        Membangun sistem <span class="text-gradient">fullstack</span> — dari database sampai antarmuka, dari server sampai sensor IoT.
+      </h1>
+      <p class="reveal is-visible text-dim" style="font-size:18px; max-width:600px; margin-top:24px;">
+        Faraytodi Atmajaya (Faraysz) — mahasiswa D4 Teknik Informatika di Politeknik Negeri Jember. Mengerjakan proyek Laravel, React Native, Flutter, hingga eksperimen IoT & Machine Learning, baik untuk kuliah maupun klien freelance.
+      </p>
+      <div class="reveal is-visible" style="display:flex; gap:16px; flex-wrap:wrap; margin-top:36px;">
+        <a href="projects.html" class="btn btn--primary">Lihat Proyek</a>
+        <a href="contact.html" class="btn btn--ghost">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section>
+    <div class="container">
+      <div class="reveal-stagger" style="display:grid; grid-template-columns:repeat(2,1fr); gap:32px;">
+        <div>
+          <span class="stat-value text-gradient" data-count="6" style="font-family:var(--font-display); font-size:40px; font-weight:800;">0</span>
+          <p class="text-dim mono" style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; margin-top:6px;">Bahasa &amp; Framework Inti</p>
+        </div>
+        <div>
+          <span class="stat-value text-gradient" data-count="15" data-suffix="+" style="font-family:var(--font-display); font-size:40px; font-weight:800;">0</span>
+          <p class="text-dim mono" style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; margin-top:6px;">Proyek Dikerjakan</p>
+        </div>
+        <div>
+          <span class="stat-value text-gradient" data-count="4" style="font-family:var(--font-display); font-size:40px; font-weight:800;">0</span>
+          <p class="text-dim mono" style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; margin-top:6px;">Semester Berjalan (D4)</p>
+        </div>
+        <div>
+          <span class="stat-value text-gradient" data-count="100" data-suffix="%" style="font-family:var(--font-display); font-size:40px; font-weight:800;">0</span>
+          <p class="text-dim mono" style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; margin-top:6px;">Komitmen Kode Rapi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="reveal" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; flex-wrap:wrap; gap:16px;">
+        <h2 style="font-size:clamp(24px,3vw,32px);">Proyek Unggulan</h2>
+        <a href="projects.html" class="mono" style="font-size:13px; color:var(--cyan);">Lihat semua →</a>
+      </div>
+      <div class="reveal-stagger" style="display:grid; grid-template-columns:1fr; gap:28px;">
+        <article class="card" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">QRDeviceManagerMobile</h3>
+            <span class="tag tag--violet">Mobile</span>
+          </div>
+          <p class="text-dim">Sistem manajemen inventarisasi lab berbasis mobile yang menggunakan QR Code dan Flutter/Dart sebagai inti teknologi utama untuk antarmuka yang responsif dan Real-Time Device Tracking.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Flutter</span><span class="tag">TypeScript</span><span class="tag">QR Code</span>
+          </div>
+        </article>
+        <article class="card" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">Sky-Schedule</h3>
+            <span class="tag tag--violet">Web App</span>
+          </div>
+          <p class="text-dim">Website layanan informasi bandara (Kedatangan/Departure) Sabit Malang, dilengkapi dengan jadwal keberangkatan, data penerbangan real-time, dan notifikasi berbasis AI untuk kemudahan pengguna.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Ruby</span><span class="tag">JavaScript</span><span class="tag">Real-time Data</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="card reveal" style="padding:56px 32px; text-align:center; position:relative;">
+        <div class="glow-blob" style="width:300px;height:300px;top:-60px;left:50%;transform:translateX(-50%);background:var(--cyan);opacity:0.08;"></div>
+        <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:16px;">Punya proyek yang perlu digarap?</h2>
+        <p class="text-dim" style="max-width:520px; margin:0 auto 28px;">Terbuka untuk joki/freelance pengembangan web maupun mobile — Laravel, React Native, atau Flutter.</p>
+        <a href="contact.html" class="btn btn--primary">Mulai Diskusi</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="mono" style="color:var(--cyan);">&lt;/&gt; Faraysz</span>
+    <div class="footer__links">
+      <a href="https://github.com/faraysz" target="_blank" rel="noopener">Github</a>
+      <a href="https://linkedin.com/in/faraysz" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/6282333000473" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+    <p class="text-dim" style="font-size:13px;">© 2026 Faraysz. Dibangun dengan presisi.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

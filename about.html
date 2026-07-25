@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tentang — Faraysz</title>
+<meta name="description" content="Tentang Faraytodi Atmajaya (Faraysz), mahasiswa D4 Teknik Informatika POLIJE dan full stack engineer." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body data-page="about">
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand"><span class="bracket">&lt;/&gt;</span> Faraysz</a>
+    <nav class="navbar__links">
+      <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
+      <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+    </nav>
+    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <button class="navbar__toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="navbar__mobile">
+    <a href="index.html" data-nav="home">Beranda</a>
+    <a href="projects.html" data-nav="projects">Proyek</a>
+    <a href="stack.html" data-nav="stack">Stack</a>
+    <a href="about.html" data-nav="about">Tentang</a>
+    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+  </div>
+</header>
+
+<main style="padding-top:76px;">
+  <section>
+    <div class="container" style="display:grid; grid-template-columns:1fr; gap:32px;">
+      <div>
+        <span class="eyebrow reveal is-visible">Kenalan</span>
+        <h1 class="reveal is-visible" style="font-size:clamp(30px,5vw,44px); margin-top:14px; line-height:1.15;">
+          Menjembatani ide kuliah, klien, dan kode yang jalan di produksi.
+        </h1>
+        <div class="reveal is-visible" style="max-width:640px; margin-top:24px; display:flex; flex-direction:column; gap:16px;">
+          <p class="text-dim" style="font-size:17px; line-height:1.7;">
+            Saya Faraytodi Atmajaya, biasa dipanggil Faraysz — mahasiswa D4 Teknik Informatika di Politeknik Negeri Jember (POLIJE). Fokus saya di pengembangan fullstack: Laravel di sisi backend, React Native dan Flutter untuk mobile, ditambah eksplorasi IoT dan Machine Learning.
+          </p>
+          <p class="text-dim" style="font-size:17px; line-height:1.7;">
+            Di luar tugas kuliah, saya juga mengerjakan proyek freelance/joki untuk klien — mulai dari sistem informasi, dashboard admin, sampai automasi testing. Saya percaya kode yang baik itu kode yang mudah dipahami dan mudah diubah.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <h2 class="reveal" style="font-size:22px; margin-bottom:28px;">Kemampuan Teknis</h2>
+      <div class="reveal-stagger" style="display:flex; flex-direction:column; gap:28px; max-width:640px;">
+
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-weight:600; color:var(--cyan);">Backend &amp; Database</span>
+            <span class="text-dim mono" style="font-size:12px;">Mahir</span>
+          </div>
+          <div class="skillbar"><div class="skillbar__fill" data-width="92%"></div></div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
+            <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">REST API</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-weight:600; color:var(--cyan);">Mobile Development</span>
+            <span class="text-dim mono" style="font-size:12px;">Menengah–Mahir</span>
+          </div>
+          <div class="skillbar"><div class="skillbar__fill" data-width="80%"></div></div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
+            <span class="tag">React Native</span><span class="tag">Flutter</span><span class="tag">Java</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-weight:600; color:var(--cyan);">IoT &amp; Machine Learning</span>
+            <span class="text-dim mono" style="font-size:12px;">Sedang Berkembang</span>
+          </div>
+          <div class="skillbar"><div class="skillbar__fill" data-width="55%"></div></div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
+            <span class="tag">IoT</span><span class="tag">Python</span><span class="tag">NLP</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="card reveal" style="padding:48px 32px; text-align:center;">
+        <h2 style="font-size:clamp(24px,3vw,32px); margin-bottom:14px;">Mari diskusikan proyek Anda</h2>
+        <p class="text-dim" style="max-width:480px; margin:0 auto 24px;">Terbuka untuk kolaborasi, tugas joki, maupun proyek freelance jangka panjang.</p>
+        <a href="contact.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="mono" style="color:var(--cyan);">&lt;/&gt; Faraysz</span>
+    <div class="footer__links">
+      <a href="https://github.com/faraysz" target="_blank" rel="noopener">Github</a>
+      <a href="https://linkedin.com/in/faraysz" target="_blank" rel="noopener">LinkedIn</a>
+      
+      <a href="contact.html">Kontak</a>
+    </div>
+    <p class="text-dim" style="font-size:13px;">© 2026 Faraysz. Dibangun dengan presisi.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   DESIGN TOKENS — Faraysz / DevPortfolio
+   Tema: dark tech-noir, aksen cyan + violet.
+   ========================================================================== */
+
+:root {
+  /* --- Warna inti --- */
+  --bg: #0d0d0f;
+  --bg-elevated: #131315;
+  --surface: #1a1a1d;
+  --surface-hi: #232326;
+  --surface-hi-2: #2c2c30;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --text: #ece9ec;
+  --text-dim: #a9a7ac;
+  --text-faint: #6f6d73;
+
+  --cyan: #00dbe7;
+  --cyan-bright: #6df3ff;
+  --cyan-dim: #006a71;
+  --violet: #8a4bff;
+  --violet-bright: #b79bff;
+  --amber: #e8c423;
+
+  --on-cyan: #00252a;
+
+  /* --- Gradien --- */
+  --grad-signature: linear-gradient(135deg, var(--cyan) 0%, var(--violet) 100%);
+  --grad-text: linear-gradient(120deg, var(--cyan-bright), var(--violet-bright));
+
+  /* --- Tipografi --- */
+  --font-display: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* --- Layout --- */
+  --container-max: 1180px;
+  --gutter: 24px;
+  --space-mobile: 20px;
+  --space-desktop: 40px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}

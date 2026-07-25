@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kontak — Faraysz</title>
+<meta name="description" content="Hubungi Faraysz untuk proyek freelance, joki, atau kolaborasi." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+
+</head>
+<body data-page="contact">
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand"><span class="bracket">&lt;/&gt;</span> Faraysz</a>
+    <nav class="navbar__links">
+      <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
+      <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+    </nav>
+    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <button class="navbar__toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="navbar__mobile">
+    <a href="index.html" data-nav="home">Beranda</a>
+    <a href="projects.html" data-nav="projects">Proyek</a>
+    <a href="stack.html" data-nav="stack">Stack</a>
+    <a href="about.html" data-nav="about">Tentang</a>
+    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+  </div>
+</header>
+
+<main style="padding-top:76px;">
+  <section style="padding-bottom:24px; text-align:center;">
+    <div class="container">
+      <span class="eyebrow reveal is-visible">Kontak</span>
+      <h1 class="reveal is-visible" style="font-size:clamp(30px,5vw,44px); margin-top:14px;">Mari mulai obrolan.</h1>
+      <p class="reveal is-visible text-dim" style="max-width:520px; margin:12px auto 0;">Untuk proyek freelance, joki tugas, atau sekadar diskusi teknis — isi form di bawah atau hubungi langsung.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container" style="display:grid; grid-template-columns:1fr; gap:40px; max-width:900px; margin:0 auto;">
+
+      <form class="card reveal" data-contact-form style="padding:36px;">
+        <!-- Alert message (hidden by default) -->
+        <div id="form-alert" style="display:none; padding:14px 18px; border-radius:8px; margin-bottom:20px; font-size:14px;"></div>
+
+        <div class="field">
+          <label for="name">Nama Lengkap</label>
+          <input id="name" name="name" type="text" placeholder="Nama Anda" required>
+        </div>
+        <div class="field">
+          <label for="email">Alamat Email</label>
+          <input id="email" name="email" type="email" placeholder="nama@email.com" required>
+        </div>
+        <div class="field">
+          <label for="subject">Jenis Proyek</label>
+          <select id="subject" name="subject">
+            <option>Web (Laravel)</option>
+            <option>Mobile (React Native / Flutter)</option>
+            <option>Joki Tugas Kuliah</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan dan timeline Anda..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary" style="width:100%;">Kirim Pesan</button>
+      </form>
+
+      <div class="reveal" style="display:flex; flex-direction:column; gap:20px;">
+        <div class="card" style="padding:28px;">
+          <h3 style="font-size:16px; color:var(--cyan); margin-bottom:16px;">Kontak Langsung</h3>
+          
+          <a href="mailto:faraytodiatmajaya@gmail.com" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); margin-bottom:12px; transition: color 0.2s ease;">
+            <span style="font-size:20px;">📧</span>
+            <span>Mail</span>
+          </a>
+          
+          <a href="https://github.com/faraysz" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); margin-bottom:12px; transition: color 0.2s ease;">
+            <span style="font-size:20px;">💻</span>
+            <span>Github</span>
+          </a>
+          
+          <a href="https://linkedin.com/in/faraysz" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); margin-bottom:12px; transition: color 0.2s ease;">
+            <span style="font-size:20px;">💼</span>
+            <span>LinkedIn</span>
+          </a>
+          
+          <a href="https://wa.me/6282333000473" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); transition: color 0.2s ease;">
+            <span style="font-size:20px;">💬</span>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <div class="card" style="padding:28px;">
+          <h3 style="font-size:16px; color:var(--cyan); margin-bottom:10px;">Waktu Respons</h3>
+          <p class="text-dim" style="font-size:14px; line-height:1.7;">Biasanya membalas dalam 1x24 jam. Untuk kebutuhan mendesak (deadline joki), sebutkan tenggat waktu di pesan.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="mono" style="color:var(--cyan);">&lt;/&gt; Faraysz</span>
+    <div class="footer__links">
+      <a href="https://github.com/faraysz" target="_blank" rel="noopener">Github</a>
+      <a href="https://linkedin.com/in/faraysz" target="_blank" rel="noopener">LinkedIn</a>
+      
+      <a href="contact.html">Kontak</a>
+    </div>
+    <p class="text-dim" style="font-size:13px;">© 2026 Faraysz. Dibangun dengan presisi.</p>
+  </div>
+</footer>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!-- EmailJS Config (API Keys) - File ini di .gitignore -->
+<script src="assets/js/emailjs-config.js"></script>
+<script>
+  // Initialize EmailJS dengan Public Key dari config
+  (function(){
+    emailjs.init(EMAILJS_CONFIG.publicKey);
+  })();
+</script>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

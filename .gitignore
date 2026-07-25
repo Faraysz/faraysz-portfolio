@@ -1,0 +1,65 @@
+# EmailJS Credentials (jangan commit ke Git)
+CREDENTIALS-TEMPLATE.md
+EMAILJS-*.md
+*emailjs*.txt
+README-EMAILJS.txt
+
+# EmailJS Config (file yang berisi API keys)
+assets/js/emailjs-config.js
+
+# Environment variables & API Keys
+.env
+.env.local
+.env.production
+*.env
+config.js
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (jika nanti pakai npm)
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# PHP
+composer.phar
+composer.lock
+
+# Backup files
+*.backup
+*~backup
+
+# JANGAN COMMIT FILE INI (berisi API keys):
+# - contact.html (ada Public Key EmailJS di script)
+# - assets/js/main.js (ada Service ID & Template ID)
+# 
+# SOLUSI: Buat file terpisah untuk config EmailJS
+# Contoh: assets/js/emailjs-config.js (masuk .gitignore)

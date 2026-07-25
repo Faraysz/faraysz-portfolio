@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Proyek — Faraysz</title>
+<meta name="description" content="Kumpulan proyek Faraysz: Laravel, React Native, Flutter, IoT, dan Machine Learning." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body data-page="projects">
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand"><span class="bracket">&lt;/&gt;</span> Faraysz</a>
+    <nav class="navbar__links">
+      <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
+      <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+    </nav>
+    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <button class="navbar__toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="navbar__mobile">
+    <a href="index.html" data-nav="home">Beranda</a>
+    <a href="projects.html" data-nav="projects">Proyek</a>
+    <a href="stack.html" data-nav="stack">Stack</a>
+    <a href="about.html" data-nav="about">Tentang</a>
+    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+  </div>
+</header>
+
+<main style="padding-top:76px;">
+  <section style="padding-bottom:24px;">
+    <div class="container">
+      <span class="eyebrow reveal is-visible">Portofolio</span>
+      <h1 class="reveal is-visible" style="font-size:clamp(30px,5vw,46px); margin-top:14px;">Proyek yang sudah digarap</h1>
+      <p class="reveal is-visible text-dim" style="max-width:560px; margin-top:12px;">Campuran proyek akademik, tugas skripsi, dan pekerjaan freelance/joki — dari web fullstack sampai automasi testing.</p>
+
+      <div class="reveal is-visible" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:32px;">
+        <button class="tag is-active" data-filter="all">Semua</button>
+        <button class="tag" data-filter="web">Web</button>
+        <button class="tag" data-filter="mobile">Mobile</button>
+        <button class="tag" data-filter="ml">ML / Data</button>
+        <button class="tag" data-filter="testing">Testing</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:16px;">
+    <div class="container">
+      <div class="reveal-stagger" style="display:grid; grid-template-columns:1fr; gap:28px;">
+
+        <article class="card" data-category="mobile" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">QRDeviceManagerMobile</h3>
+            <span class="mono text-dim" aria-hidden="true">📱</span>
+          </div>
+          <p class="text-dim">Sistem manajemen inventarisasi lab berbasis mobile yang menggunakan QR Code dan Flutter/Dart sebagai inti teknologi utama untuk antarmuka yang responsif dan Real-Time Device Tracking.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Flutter</span><span class="tag">TypeScript</span><span class="tag">QR Code</span><span class="tag">Real-time</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="https://github.com/faraysz/QRDeviceManagerMobile" target="_blank" rel="noopener" class="btn btn--ghost" style="padding:10px 20px; font-size:14px;">
+              💻 GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">Sky-Schedule</h3>
+            <span class="mono text-dim" aria-hidden="true">✈</span>
+          </div>
+          <p class="text-dim">Website layanan informasi bandara (Kedatangan/Departure) Sabit Malang, dilengkapi dengan jadwal keberangkatan, data penerbangan real-time, dan notifikasi berbasis AI untuk kemudahan pengguna.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Ruby</span><span class="tag">JavaScript</span><span class="tag">Real-time Data</span><span class="tag">AI</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="https://github.com/faraysz/Sky-Schedule" target="_blank" rel="noopener" class="btn btn--ghost" style="padding:10px 20px; font-size:14px;">
+              💻 GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">WebsiteAdmin-ADEK</h3>
+            <span class="mono text-dim" aria-hidden="true">🌐</span>
+          </div>
+          <p class="text-dim">Sistem informasi berbasis web untuk mengelola bagian admin dan aplikasi — dilengkapi dengan PHP dan teknologi web standar untuk manajemen data, serta pengaturan informasi aplikasi dari sentralisasi interface.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Admin Panel</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="https://github.com/faraysz/WebsiteAdmin-ADEK" target="_blank" rel="noopener" class="btn btn--ghost" style="padding:10px 20px; font-size:14px;">
+              💻 GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">D-Kost Desktop</h3>
+            <span class="mono text-dim" aria-hidden="true">🖥️</span>
+          </div>
+          <p class="text-dim">Aplikasi Desktop berbasis Java yang dirancang untuk membuat pengelolaan data kos menjadi lebih mudah dengan framework Swing dan konsep OOP yang terstruktur, dengan kemampuan CRUD penuh.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Java</span><span class="tag">Swing</span><span class="tag">OOP</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="https://github.com/faraysz/D-Kost_Desktop" target="_blank" rel="noopener" class="btn btn--ghost" style="padding:10px 20px; font-size:14px;">
+              💻 GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">Adek Jaravel</h3>
+            <span class="mono text-dim" aria-hidden="true">📦</span>
+          </div>
+          <p class="text-dim">Proyek web Laravel Framework sebagai aplikasi web yang dibangun dengan modern best practices, dengan routing, ORM Eloquent, dan struktur MVC standar untuk skalabilitas tinggi.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Laravel</span><span class="tag">Ruby</span><span class="tag">MVC</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="https://github.com/faraysz/Adek_jaravel" target="_blank" rel="noopener" class="btn btn--ghost" style="padding:10px 20px; font-size:14px;">
+              💻 GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="card" data-category="testing" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">Maw Bouquet — QA Automation Suite</h3>
+            <span class="mono text-dim" aria-hidden="true">✓</span>
+          </div>
+          <p class="text-dim">Test automation Selenium + Mocha untuk e-commerce buket bunga "Maw Bouquet": validasi flow checkout, penanganan timing screenshot, dan laporan HTML pass/fail otomatis.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">Selenium</span><span class="tag">Mocha</span><span class="tag">JavaScript</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="#" class="btn btn--ghost" style="padding:10px 20px; font-size:14px; opacity:0.5; cursor:not-allowed;">
+              🔒 Client Project
+            </a>
+          </div>
+        </article>
+
+        <article class="card" data-category="web" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; margin-bottom:14px;">
+            <h3 style="font-size:22px; color:var(--cyan-bright);">Pneumo Health — Company Profile</h3>
+            <span class="mono text-dim" aria-hidden="true">✚</span>
+          </div>
+          <p class="text-dim">Website informasi kesehatan Pneumonia untuk platform manajemen klinis pasien pneumonia berbasis web.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Session Auth</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:24px;">
+            <a href="https://faraysz.github.io/Landing-Page-Klinik/" class="btn btn--ghost" style="padding:10px 20px; font-size:14px; opacity:0.5; cursor:allowed;">
+              🔒 Client Project
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card reveal" style="padding:56px 32px; text-align:center; position:relative;">
+        <div class="glow-blob" style="width:300px;height:300px;top:-60px;left:50%;transform:translateX(-50%);background:var(--cyan);opacity:0.08;"></div>
+        <h2 style="font-size:clamp(26px,4vw,38px); margin-bottom:16px;">Lihat lebih banyak eksperimen di GitHub</h2>
+        <p class="text-dim" style="max-width:520px; margin:0 auto 28px;">Explore semua proyek, eksperimen, dan kontribusi open-source.</p>
+        <a href="https://github.com/faraysz" target="_blank" rel="noopener" class="btn btn--primary" style="padding:16px 48px; font-size:16px;">Buka GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="mono" style="color:var(--cyan);">&lt;/&gt; Faraysz</span>
+    <div class="footer__links">
+      <a href="https://github.com/faraysz" target="_blank" rel="noopener">Github</a>
+      <a href="https://linkedin.com/in/faraysz" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/6282333000473" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+    <p class="text-dim" style="font-size:13px;">© 2026 Faraysz. Dibangun dengan presisi.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
