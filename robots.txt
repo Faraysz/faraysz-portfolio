@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faraysz.github.io/faraysz-portfolio/sitemap.xml

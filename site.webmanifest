@@ -1,0 +1,22 @@
+{
+  "name": "Faraysz Portfolio",
+  "short_name": "Faraysz",
+  "description": "Portofolio Faraytodi Atmajaya (Faraysz) — fullstack developer: Laravel, Flutter, React Native, IoT & Machine Learning.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0d0d0f",
+  "theme_color": "#0d0d0f",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

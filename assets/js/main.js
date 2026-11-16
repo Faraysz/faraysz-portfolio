@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* --- Counter angka statistik (mis. 250+, 99.9%) --- */
+  /* --- Counter angka statistik (mis. 12+, 24 Jam) --- */
   document.querySelectorAll('.stat-value[data-count]').forEach((el) => {
     const raw = el.dataset.count;
     const suffix = el.dataset.suffix || '';
@@ -131,61 +131,84 @@ document.addEventListener('DOMContentLoaded', () => {
     tick();
   });
 
-  /* --- Form contact: kirim via EmailJS --- */
+  /* --- Form contact: kirim via EmailJS; kalau config belum diisi, fallback WhatsApp --- */
   const form = document.querySelector('[data-contact-form]');
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const btn = form.querySelector('button[type="submit"]');
-      const alert = document.getElementById('form-alert');
+      const alertBox = document.getElementById('form-alert');
       const original = btn.textContent;
-      
+
       // Reset alert
-      alert.style.display = 'none';
-      
+      alertBox.style.display = 'none';
+
       // Disable button
       btn.textContent = 'Mengirim...';
       btn.disabled = true;
 
-      // EmailJS Send
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const subject = form.subject.value;
+      const message = form.message.value.trim();
+
+      // Config dianggap siap hanya bila file emailjs-config.js ikut ter-load
+      // DAN key-nya sudah diisi (bukan placeholder dari file contoh).
+      const emailjsReady = typeof EMAILJS_CONFIG !== 'undefined'
+        && typeof emailjs !== 'undefined'
+        && EMAILJS_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY';
+
       try {
-        // Template parameters - SESUAI dengan template "Contact Us" bawaan EmailJS
-        // Template Contact Us hanya punya variable {{name}} dan {{message}}
-        const templateParams = {
-          name: form.name.value,
-          email: form.email.value,
-          message: `
+        if (emailjsReady) {
+          // Template parameters - SESUAI dengan template "Contact Us" bawaan EmailJS
+          // Template Contact Us hanya punya variable {{name}} dan {{message}}
+          const templateParams = {
+            name: name,
+            email: email,
+            message: `
 =================================
 KONTAK DARI PORTFOLIO FARAYSZ
 =================================
 
-NAMA: ${form.name.value}
-EMAIL: ${form.email.value}
-JENIS PROYEK: ${form.subject.value}
+NAMA: ${name}
+EMAIL: ${email}
+JENIS PROYEK: ${subject}
 
 ---------------------------------
 PESAN:
 ---------------------------------
-${form.message.value}
+${message}
 
 =================================
 Dikirim pada: ${new Date().toLocaleString('id-ID')}
-Balas ke: ${form.email.value}
+Balas ke: ${email}
 =================================
           `.trim()
-        };
-        
-        // Gunakan config dari emailjs-config.js
-        await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams);
-        
-        showAlert(alert, 'success', 'Pesan berhasil dikirim! Terima kasih sudah menghubungi.');
-        form.reset();
+          };
+
+          // Gunakan config dari emailjs-config.js
+          await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams);
+
+          showAlert(alertBox, 'success', 'Pesan berhasil dikirim! Terima kasih sudah menghubungi.');
+          form.reset();
+        } else {
+          // FALLBACK: EmailJS belum dikonfigurasi (file config tidak ada / masih
+          // berisi placeholder) — arahkan pesan ke WhatsApp, tanpa error.
+          const waText = `Halo Faraysz, saya ${name}.\n\nJenis proyek: ${subject}\nEmail: ${email}\n\n${message}`;
+          window.open('https://wa.me/6282333000472?text=' + encodeURIComponent(waText), '_blank');
+
+          showAlert(alertBox, 'info',
+            'EmailJS belum dikonfigurasi, jadi pesan Anda dibuka lewat WhatsApp. ' +
+            'Bisa juga kirim manual ke faraytodiatmajaya@gmail.com. ' +
+            'Ingin pengiriman email otomatis? Isi assets/js/emailjs-config.js (lihat file contohnya).');
+          form.reset();
+        }
       } catch (error) {
         console.error('EmailJS Error:', error);
-        showAlert(alert, 'error', 'Gagal mengirim pesan. Silakan coba lagi atau hubungi langsung via email.');
+        showAlert(alertBox, 'error', 'Gagal mengirim pesan. Silakan coba lagi atau hubungi langsung via email/WhatsApp.');
       }
-      
+
       // Re-enable button
       btn.textContent = original;
       btn.disabled = false;
@@ -193,15 +216,17 @@ Balas ke: ${form.email.value}
   }
 
   function showAlert(element, type, message) {
+    const styles = {
+      success: { bg: 'rgba(0, 219, 231, 0.15)', border: '1px solid rgba(0, 219, 231, 0.4)', color: 'var(--cyan-bright)' },
+      error:   { bg: 'rgba(232, 196, 35, 0.15)', border: '1px solid rgba(232, 196, 35, 0.4)', color: 'var(--amber)' },
+      info:    { bg: 'rgba(138, 75, 255, 0.15)', border: '1px solid rgba(138, 75, 255, 0.4)', color: 'var(--violet-bright)' }
+    };
+    const s = styles[type] || styles.info;
     element.textContent = message;
     element.style.display = 'block';
-    element.style.background = type === 'success' 
-      ? 'rgba(0, 219, 231, 0.15)' 
-      : 'rgba(232, 196, 35, 0.15)';
-    element.style.border = type === 'success'
-      ? '1px solid rgba(0, 219, 231, 0.4)'
-      : '1px solid rgba(232, 196, 35, 0.4)';
-    element.style.color = type === 'success' ? 'var(--cyan-bright)' : 'var(--amber)';
+    element.style.background = s.bg;
+    element.style.border = s.border;
+    element.style.color = s.color;
   }
 
   /* --- Navbar: sedikit lebih pekat saat discroll --- */

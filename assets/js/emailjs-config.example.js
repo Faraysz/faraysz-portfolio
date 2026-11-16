@@ -1,10 +1,13 @@
 /* ==========================================================================
    EMAILJS CONFIG — Example File
-   
+
    CARA SETUP:
    1. Copy file ini jadi 'emailjs-config.js'
    2. Isi dengan credentials EmailJS Anda
    3. File 'emailjs-config.js' sudah ada di .gitignore (aman)
+
+   CATATAN: selama 'emailjs-config.js' tidak ada (mis. di GitHub Pages),
+   form kontak otomatis fallback ke WhatsApp — tidak ada error.
    ========================================================================== */
 
 const EMAILJS_CONFIG = {
