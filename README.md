@@ -1,55 +1,54 @@
-# Faraysz — Portfolio
+<div align="center">
 
-Website portofolio profesional Faraytodi Atmajaya (Faraysz) — Fullstack Web & Mobile Developer.
-Dibangun menggunakan HTML5, CSS3 kustom (dark tech-noir), dan JavaScript murni tanpa framework build.
+# 💼 Faraysz — Portfolio
 
----
+**Portofolio Profesional Faraytodi Atmajaya | Fullstack Web & Mobile Developer**
 
-## 📁 Dokumentasi & Panduan Proyek (`/docs`)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/id/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Dark%20Tech--Noir-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/id/docs/Web/CSS)
+[![Vanilla JS](https://img.shields.io/badge/Vanilla%20JS-No%20Framework-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/id/docs/Web/JavaScript)
+[![EmailJS](https://img.shields.io/badge/EmailJS-Form%20Handling-8A2BE2?style=for-the-badge&logo=email&logoColor=white)](https://www.emailjs.com/)
+[![Performance](https://img.shields.io/badge/Total%20Assets-%3C15KB-4CAF50?style=for-the-badge)](#)
 
-Semua dokumen panduan, petunjuk teknis, dan catatan proyek telah dirapikan ke dalam folder **[`docs/`](./docs/)**:
-
-| Dokumen | Deskripsi |
-| :--- | :--- |
-| [🚀 CARA-MENJALANKAN.md](./docs/CARA-MENJALANKAN.md) | Panduan menjalankan web di lokal dan deployment ke GitHub Pages |
-| [🔍 PANDUAN-SEO-GOOGLE.md](./docs/PANDUAN-SEO-GOOGLE.md) | Langkah verifikasi Google Search Console & optimasi SEO |
-| [✉️ EMAILJS-SETUP-GUIDE.md](./docs/EMAILJS-SETUP-GUIDE.md) | Panduan lengkap integrasi form kontak via EmailJS |
-| [⚡ EMAILJS-QUICK-START.md](./docs/EMAILJS-QUICK-START.md) | Panduan singkat dan checklist konfigurasi EmailJS |
-| [🔑 CREDENTIALS-TEMPLATE.md](./docs/CREDENTIALS-TEMPLATE.md) | Template pencatatan kredensial dan API keys |
-| [📝 CHANGELOG-CV-UPDATE.md](./docs/CHANGELOG-CV-UPDATE.md) | Log pembaruan portofolio berdasarkan CV terbaru |
-| [📄 README-EMAILJS.txt](./docs/README-EMAILJS.txt) | Catatan ringkas konfigurasi EmailJS |
+</div>
 
 ---
 
-## 🌐 Struktur Halaman Utama
+## 🎯 Tentang Proyek Ini
 
-```
-index.html                → Landing page utama (High-converting: Hero, Value, Proyek, Alur Kerja, FAQ)
-projects.html             → Daftar proyek portofolio + filter kategori interaktif
-stack.html                → Katalog teknologi (Bahasa, Framework, Tools, & Bidang Teknis)
-about.html                → Profil pengembang, bio, & kemampuan teknis
-contact.html              → Formulir kontak (EmailJS) & tautan WhatsApp langsung
-404.html                  → Halaman error 404 kustom
-assets/css/               → variables.css, base.css, components.css, animations.css
-assets/js/main.js         → Logika interaksi: navbar, smooth scroll, reveal, counter
-docs/                     → Seluruh berkas dokumentasi & panduan
-```
+Ini adalah website portofolio pribadi yang dibangun dengan filosofi **"Less is More"**. 
+
+Tanpa framework berat, tanpa build tool (Webpack/Vite), dan tanpa dependency npm. Murni **HTML5, CSS3 kustom (tema dark tech-noir), dan Vanilla JavaScript**. Hasilnya? Website yang **ultra-ringan (total aset <15KB)**, memuat secara instan, mendapat skor performa sempurna, namun tetap kaya akan interaksi modern seperti *scroll-reveal*, *typewriter effect*, *cursor glow*, dan filter proyek *client-side*.
 
 ---
 
-## 🚀 Setup Cepat Form Kontak (EmailJS)
+## ✨ Fitur Utama
 
-1. Buat akun di [emailjs.com](https://www.emailjs.com/).
-2. Salin template konfigurasi:
-   ```bash
-   cp assets/js/emailjs-config.example.js assets/js/emailjs-config.js
-   ```
-3. Buka `assets/js/emailjs-config.js` lalu masukkan **Service ID**, **Template ID**, dan **Public Key** Anda.
-   *(File ini sudah otomatis ada di `.gitignore` sehingga aman dari kebocoran key)*.
+| Fitur | Deskripsi |
+|---------|-------------|
+| ⚡ **Ultra-Fast & Lightweight** | Total ukuran aset di bawah 15KB. Memuat hampir secara instan, bahkan di koneksi lambat. |
+| 🌑 **Dark Tech-Noir Aesthetics** | Desain modern dengan palet warna gelap, tipografi presisi (Bricolage Grotesque, DM Sans, JetBrains Mono), dan efek *glow* yang elegan. |
+| 🎬 **Micro-Interactions** | Animasi *scroll-reveal*, *typewriter effect* di hero section, dan *counter* statistik yang halus. |
+| 🔍 **Client-Side Filtering** | Filter kategori proyek yang berjalan 100% di browser tanpa perlu request ke server. |
+| ✉️ **Form Kontak Fungsional** | Terintegrasi dengan **EmailJS**, memungkinkan pengunjung mengirim pesan langsung ke inbox tanpa memerlukan backend. |
+| 📱 **Fully Responsive** | Tampilan optimal dan rapi di semua ukuran layar, dari mobile hingga desktop ultrawide. |
 
 ---
 
-## 📄 Lisensi & Kredit
+## 📂 Struktur Proyek
 
-Dibuat dengan presisi oleh **Faraytodi Atmajaya (Faraysz)** © 2026.
-Tersedia untuk proyek freelance, kolaborasi, dan rekrutmen.
+```text
+faraysz-portfolio/
+├── index.html                # Landing page utama (Hero, Value, Proyek, Alur Kerja, FAQ)
+├── projects.html             # Daftar proyek portofolio + filter kategori interaktif
+├── stack.html                # Katalog teknologi (Bahasa, Framework, Tools, & Bidang Teknis)
+├── about.html                # Profil pengembang, bio, & kemampuan teknis
+├── contact.html              # Formulir kontak (EmailJS) & tautan WhatsApp langsung
+├── 404.html                  # Halaman error 404 kustom yang selaras dengan tema
+├── assets/
+│   ├── css/                  # variables.css, base.css, components.css, animations.css
+│   ├── js/                   # main.js (interaksi) & emailjs-config.js (form handling)
+│   └── images/               # Aset gambar, ikon, dan favicon
+├── docs/                     # 📚 PUSAT DOKUMENTASI (Lihat bagian "Dokumentasi" di bawah)
+├── .github/workflows/        # CI/CD untuk deployment otomatis ke GitHub Pages
+└── sitemap.xml / robots.txt  # Optimasi SEO dasar
