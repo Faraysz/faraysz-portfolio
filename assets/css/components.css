@@ -27,12 +27,26 @@
 .navbar__brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 19px;
   color: var(--text);
   letter-spacing: -0.02em;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-xs);
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.brand-logo--footer {
+  width: 32px;
+  height: 32px;
 }
 
 .navbar__brand span.bracket {
