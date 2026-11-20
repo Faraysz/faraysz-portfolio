@@ -6,12 +6,14 @@
 <title>Tech Stack: Faraysz (Backend, Mobile & Tools)</title>
 <meta name="description" content="Teknologi dan tools yang digunakan Faraytodi Atmajaya (Faraysz): Laravel, MySQL, Flutter, React Native, Java, dan QA testing." />
 <link rel="canonical" href="https://faraysz.github.io/faraysz-portfolio/stack.html">
-<link rel="icon" type="image/png" href="assets/img/logofix.png">
-<link rel="apple-touch-icon" href="assets/img/logofix.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/logofix.png?v=3">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=3">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
@@ -19,17 +21,18 @@
 
 <style>
   .stack-category {
-    margin-bottom: 48px;
+    margin-bottom: 56px;
   }
 
   .stack-category-title {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
-    color: var(--text);
-    margin-bottom: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: var(--font-display);
   }
 
   .stack-category-title::before {
@@ -43,7 +46,7 @@
   .tech-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
   @media (min-width: 640px) {
@@ -59,67 +62,83 @@
   }
 
   .tech-card {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 22px;
-    transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+    transition: all 0.3s var(--ease);
   }
 
   .tech-card:hover {
-    border-color: var(--border-strong);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.045);
     transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.04);
   }
 
   .tech-name {
     font-weight: 700;
-    font-size: 16px;
-    color: var(--text);
+    font-size: 16.5px;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: var(--font-display);
   }
 
   .tech-desc {
     font-size: 13.5px;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--text-dim);
-    margin-top: 8px;
+    margin-top: 10px;
   }
 </style>
 </head>
 <body data-page="stack">
 
 <header class="navbar">
-  <div class="container navbar__inner">
-    <a href="index.html" class="navbar__brand"><img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo" width="44" height="44"> Faraysz</a>
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo" width="38" height="38">
+      <span>Faraysz.</span>
+    </a>
     <nav class="navbar__links">
       <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
       <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
-      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link is-active">Stack</a>
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+      <a href="contact.html" data-nav="contact" class="navbar__link">Kontak</a>
     </nav>
-    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek." target="_blank" rel="noopener" class="navbar__cta">
+      Hubungi Saya
+    </a>
     <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
-    <a href="index.html" data-nav="home">Beranda</a>
-    <a href="projects.html" data-nav="projects">Proyek</a>
-    <a href="stack.html" data-nav="stack">Stack</a>
-    <a href="about.html" data-nav="about">Tentang</a>
-    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+    <a href="index.html">Beranda</a>
+    <a href="projects.html">Proyek</a>
+    <a href="stack.html" class="is-active">Stack</a>
+    <a href="about.html">Tentang</a>
+    <a href="contact.html">Kontak</a>
   </div>
 </header>
 
-<main style="padding-top:72px;">
+<main>
 
-  <section style="padding-bottom:20px;">
-    <div class="container">
+  <section class="hero-wrap" style="padding-bottom:20px;">
+    <div class="hero-watermark text-outline" aria-hidden="true">
+      TECH<br>STACK
+    </div>
+
+    <div class="container" style="position:relative; z-index:1;">
       <div class="reveal is-visible" style="max-width:680px;">
-        <h1 style="font-size:clamp(32px, 5vw, 44px); font-weight:800; color:var(--text);">
+        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; color:var(--cyan-bright); text-transform:uppercase;">EKOSISTEM &amp; TOOLS</span>
+        <h1 style="font-size:clamp(34px, 5vw, 54px); font-weight:800; color:#ffffff; margin-top:8px; line-height:1.1;">
           Teknologi dan Ekosistem Kerja
         </h1>
-        <p style="color:var(--text-dim); margin-top:12px; font-size:16px; line-height:1.7;">
+        <p style="color:var(--text-dim); margin-top:14px; font-size:16px; line-height:1.75;">
           Daftar bahasa pemrograman, framework, dan tools yang saya gunakan secara aktif untuk membangun aplikasi backend web, mobile multiplatform, serta automasi pengujian.
         </p>
       </div>
@@ -283,16 +302,24 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <div style="font-weight:700; color:var(--text); font-size:15px; display:flex; align-items:center; gap:10px;">
-      <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo brand-logo--footer" width="32" height="32"> Faraysz
+    <div class="footer__brand-wrap">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo brand-logo--footer" width="32" height="32">
+        <span class="footer__brand-title">Faraysz.</span>
+      </div>
+      <p class="footer__brand-desc">
+        Menciptakan sistem backend web dan aplikasi mobile yang andal, rapi, dan teruji di lingkungan nyata.
+      </p>
     </div>
-    <div class="footer__links">
-      <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="contact.html">Kontak</a>
-    </div>
-    <div style="font-size:13px; color:var(--text-dim);">
-      &copy; 2026 Faraytodi Atmajaya. Dibangun secara mandiri.
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
+      <div class="footer__links">
+        <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+      <div style="font-size:12.5px; color:var(--text-faint); font-family:var(--font-mono);">
+        &copy; 2026 Faraytodi Atmajaya &bull; Hak Cipta Dilindungi
+      </div>
     </div>
   </div>
 </footer>

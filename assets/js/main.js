@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
     revealTargets.forEach((el) => el.classList.add('is-visible'));
   }
 
-  /* --- Efek glow kursor pada card --- */
-  document.querySelectorAll('.card').forEach((card) => {
+  /* --- Efek glow kursor pada card & glass-card --- */
+  document.querySelectorAll('.card, .glass-card, .project-item, .tech-card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       card.style.setProperty('--mx', `${e.clientX - rect.left}px`);

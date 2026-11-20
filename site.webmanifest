@@ -1,7 +1,7 @@
 {
   "name": "Faraysz Portfolio",
   "short_name": "Faraysz",
-  "description": "Portofolio Faraytodi Atmajaya (Faraysz) — fullstack developer: Laravel, Flutter, React Native, IoT & Machine Learning.",
+  "description": "Portofolio Faraytodi Atmajaya (Faraysz): fullstack developer Laravel, Flutter, React Native, IoT.",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#0d0d0f",

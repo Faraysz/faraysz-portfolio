@@ -6,12 +6,14 @@
 <title>Kontak: Faraysz (Hubungi Langsung)</title>
 <meta name="description" content="Hubungi Faraytodi Atmajaya (Faraysz) untuk konsultasi proyek web Laravel, aplikasi mobile Flutter & React Native, atau kolaborasi teknis." />
 <link rel="canonical" href="https://faraysz.github.io/faraysz-portfolio/contact.html">
-<link rel="icon" type="image/png" href="assets/img/logofix.png">
-<link rel="apple-touch-icon" href="assets/img/logofix.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/logofix.png?v=3">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=3">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
@@ -22,14 +24,16 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 36px;
-    max-width: 960px;
-    margin: 36px auto 0;
+    max-width: 1040px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
 
-  @media (min-width: 860px) {
+  @media (min-width: 880px) {
     .contact-layout {
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 48px;
+      gap: 40px;
     }
   }
 
@@ -38,75 +42,85 @@
     align-items: center;
     gap: 14px;
     padding: 14px 18px;
-    border-radius: var(--radius-sm);
-    background: var(--surface);
-    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--text);
-    font-size: 14.5px;
+    font-size: 14px;
     font-weight: 500;
-    transition: all 0.2s var(--ease);
+    transition: all 0.25s var(--ease);
     text-decoration: none;
     margin-bottom: 12px;
   }
 
   .direct-link-item:hover {
-    border-color: var(--cyan);
-    background: var(--surface-hi);
-    color: var(--cyan-bright);
-    transform: translateX(3px);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    transform: translateX(4px);
   }
 
   .direct-link-icon {
     font-size: 18px;
     width: 24px;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan);
   }
 </style>
 </head>
 <body data-page="contact">
 
 <header class="navbar">
-  <div class="container navbar__inner">
-    <a href="index.html" class="navbar__brand"><img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo" width="44" height="44"> Faraysz</a>
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo" width="38" height="38">
+      <span>Faraysz.</span>
+    </a>
     <nav class="navbar__links">
       <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
       <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
       <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+      <a href="contact.html" data-nav="contact" class="navbar__link is-active">Kontak</a>
     </nav>
-    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek." target="_blank" rel="noopener" class="navbar__cta">
+      Hubungi Saya
+    </a>
     <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
-    <a href="index.html" data-nav="home">Beranda</a>
-    <a href="projects.html" data-nav="projects">Proyek</a>
-    <a href="stack.html" data-nav="stack">Stack</a>
-    <a href="about.html" data-nav="about">Tentang</a>
-    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+    <a href="index.html">Beranda</a>
+    <a href="projects.html">Proyek</a>
+    <a href="stack.html">Stack</a>
+    <a href="about.html">Tentang</a>
+    <a href="contact.html" class="is-active">Kontak</a>
   </div>
 </header>
 
-<main style="padding-top:72px;">
+<main>
 
-  <section style="padding-bottom:10px;">
-    <div class="container" style="text-align:center;">
-      <div class="reveal is-visible" style="max-width:640px; margin:0 auto;">
-        <h1 style="font-size:clamp(32px, 5vw, 44px); font-weight:800; color:var(--text);">
+  <section class="hero-wrap" style="padding-bottom: 30px;">
+    <div class="hero-watermark text-outline" aria-hidden="true">
+      GET IN<br>TOUCH
+    </div>
+
+    <div class="container" style="position:relative; z-index:1; text-align:center;">
+      <div class="reveal is-visible" style="max-width:680px; margin:0 auto 36px;">
+        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; color:var(--cyan-bright); text-transform:uppercase;">HUBUNGI SAYA</span>
+        <h1 style="font-size:clamp(34px, 5.5vw, 54px); font-weight:800; color:#ffffff; line-height:1.1; margin-top:8px;">
           Mulai Percakapan
         </h1>
-        <p style="color:var(--text-dim); margin-top:12px; font-size:16px; line-height:1.7;">
-          Punya rencana proyek pembuatan website, aplikasi mobile, atau kebutuhan sistem informasi? Silakan kirim pesan melalui form di bawah atau hubungi langsung.
+        <p style="color:var(--text-dim); margin-top:14px; font-size:16px; line-height:1.75;">
+          Punya rencana proyek pembuatan website, aplikasi mobile, atau kebutuhan sistem informasi? Silakan kirim pesan melalui formulir di bawah atau hubungi langsung via WhatsApp.
         </p>
       </div>
-    </div>
-  </section>
 
-  <section style="padding-top:10px; padding-bottom:80px;">
-    <div class="container">
       <div class="contact-layout reveal is-visible">
 
         <!-- Formulir Pesan -->
-        <form class="card" data-contact-form style="padding:32px; background:var(--bg-elevated);">
+        <form class="glass-card" data-contact-form style="padding:36px; text-align:left;">
           <!-- Alert Notifikasi -->
           <div id="form-alert" style="display:none; padding:12px 16px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:14px;"></div>
 
@@ -142,9 +156,9 @@
         </form>
 
         <!-- Kontak Langsung -->
-        <div>
-          <div class="card" style="padding:28px; background:var(--bg-elevated); margin-bottom:20px;">
-            <h2 style="font-size:17px; font-weight:700; color:var(--text); margin-bottom:18px;">Kanal Langsung</h2>
+        <div style="text-align:left;">
+          <div class="glass-card" style="padding:32px; margin-bottom:20px;">
+            <h2 style="font-size:18px; font-weight:700; color:#ffffff; margin-bottom:20px; font-family:var(--font-display);">Kanal Langsung</h2>
 
             <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek%20aplikasi." target="_blank" rel="noopener" class="direct-link-item">
               <span class="direct-link-icon">
@@ -182,12 +196,12 @@
             </a>
           </div>
 
-          <div class="card" style="padding:24px; background:var(--bg-elevated);">
-            <div style="font-weight:700; font-size:15px; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+          <div class="glass-card" style="padding:24px;">
+            <div style="font-weight:700; font-size:15px; color:#ffffff; margin-bottom:8px; display:flex; align-items:center; gap:8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               <span>Waktu Respons</span>
             </div>
-            <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim);">
+            <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim); margin:0;">
               Saya biasanya membalas pesan dalam waktu beberapa jam pada hari kerja. Untuk respons paling cepat, silakan hubungi langsung via WhatsApp.
             </p>
           </div>
@@ -201,16 +215,24 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <div style="font-weight:700; color:var(--text); font-size:15px; display:flex; align-items:center; gap:10px;">
-      <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo brand-logo--footer" width="32" height="32"> Faraysz
+    <div class="footer__brand-wrap">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo brand-logo--footer" width="32" height="32">
+        <span class="footer__brand-title">Faraysz.</span>
+      </div>
+      <p class="footer__brand-desc">
+        Menciptakan sistem backend web dan aplikasi mobile yang andal, rapi, dan teruji di lingkungan nyata.
+      </p>
     </div>
-    <div class="footer__links">
-      <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="contact.html">Kontak</a>
-    </div>
-    <div style="font-size:13px; color:var(--text-dim);">
-      &copy; 2026 Faraytodi Atmajaya. Dibangun secara mandiri.
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
+      <div class="footer__links">
+        <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+      <div style="font-size:12.5px; color:var(--text-faint); font-family:var(--font-mono);">
+        &copy; 2026 Faraytodi Atmajaya &bull; Hak Cipta Dilindungi
+      </div>
     </div>
   </div>
 </footer>

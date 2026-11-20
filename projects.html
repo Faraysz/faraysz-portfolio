@@ -6,12 +6,14 @@
 <title>Proyek: Faraysz (Web, Mobile, Desktop)</title>
 <meta name="description" content="Koleksi proyek Faraytodi Atmajaya (Faraysz): backend Laravel, aplikasi mobile Flutter dan React Native, desktop Java, serta pengujian sistem." />
 <link rel="canonical" href="https://faraysz.github.io/faraysz-portfolio/projects.html">
-<link rel="icon" type="image/png" href="assets/img/logofix.png">
-<link rel="apple-touch-icon" href="assets/img/logofix.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/logofix.png?v=3">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=3">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
@@ -19,52 +21,66 @@
 
 <style>
   .project-item {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 28px;
-    transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s var(--ease);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .project-item:hover {
-    border-color: var(--cyan);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.045);
     transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.04);
   }
 
   .filter-bar {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-top: 24px;
+    margin-top: 28px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px;
+    border-radius: 9999px;
+    width: fit-content;
   }
 
   .filter-btn {
-    padding: 8px 16px;
-    border-radius: var(--radius-xs);
-    font-size: 13.5px;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    font-size: 13px;
     font-weight: 500;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-dim);
+    font-family: var(--font-body);
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
-    transition: all 0.2s var(--ease);
+    transition: all 0.25s var(--ease);
   }
 
-  .filter-btn.is-active,
-  .filter-btn:hover {
-    background: var(--cyan-dim);
-    border-color: var(--cyan);
-    color: var(--cyan-bright);
+  .filter-btn.is-active {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .filter-btn:hover:not(.is-active) {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .project-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 22px;
-    margin-top: 32px;
+    gap: 24px;
+    margin-top: 36px;
   }
 
   @media (min-width: 768px) {
@@ -77,35 +93,46 @@
 <body data-page="projects">
 
 <header class="navbar">
-  <div class="container navbar__inner">
-    <a href="index.html" class="navbar__brand"><img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo" width="44" height="44"> Faraysz</a>
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo" width="38" height="38">
+      <span>Faraysz.</span>
+    </a>
     <nav class="navbar__links">
       <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
-      <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
+      <a href="projects.html" data-nav="projects" class="navbar__link is-active">Proyek</a>
       <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
+      <a href="contact.html" data-nav="contact" class="navbar__link">Kontak</a>
     </nav>
-    <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
+    <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek." target="_blank" rel="noopener" class="navbar__cta">
+      Hubungi Saya
+    </a>
     <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
-    <a href="index.html" data-nav="home">Beranda</a>
-    <a href="projects.html" data-nav="projects">Proyek</a>
-    <a href="stack.html" data-nav="stack">Stack</a>
-    <a href="about.html" data-nav="about">Tentang</a>
-    <a href="contact.html" data-nav="contact">Hubungi Saya</a>
+    <a href="index.html">Beranda</a>
+    <a href="projects.html" class="is-active">Proyek</a>
+    <a href="stack.html">Stack</a>
+    <a href="about.html">Tentang</a>
+    <a href="contact.html">Kontak</a>
   </div>
 </header>
 
-<main style="padding-top:72px;">
+<main>
 
-  <section style="padding-bottom:20px;">
-    <div class="container">
+  <section class="hero-wrap" style="padding-bottom:20px;">
+    <div class="hero-watermark text-outline" aria-hidden="true">
+      PROJECTS<br>CATALOG
+    </div>
+
+    <div class="container" style="position:relative; z-index:1;">
       <div class="reveal is-visible" style="max-width:680px;">
-        <h1 style="font-size:clamp(32px, 5vw, 44px); font-weight:800; color:var(--text);">
+        <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; color:var(--cyan-bright); text-transform:uppercase;">PORTFOLIO ARCHIVE</span>
+        <h1 style="font-size:clamp(34px, 5vw, 54px); font-weight:800; color:#ffffff; margin-top:8px; line-height:1.1;">
           Daftar Proyek Terpilih
         </h1>
-        <p style="color:var(--text-dim); margin-top:12px; font-size:16px; line-height:1.7;">
+        <p style="color:var(--text-dim); margin-top:14px; font-size:16px; line-height:1.75;">
           Kumpulan hasil pengerjaan dari tugas workshop perkuliahan di Politeknik Negeri Jember, eksplorasi open-source, dan proyek bersama klien.
         </p>
 
@@ -283,16 +310,24 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <div style="font-weight:700; color:var(--text); font-size:15px; display:flex; align-items:center; gap:10px;">
-      <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo brand-logo--footer" width="32" height="32"> Faraysz
+    <div class="footer__brand-wrap">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/img/logofix.png" alt="Faraysz" class="brand-logo brand-logo--footer" width="32" height="32">
+        <span class="footer__brand-title">Faraysz.</span>
+      </div>
+      <p class="footer__brand-desc">
+        Menciptakan sistem backend web dan aplikasi mobile yang andal, rapi, dan teruji di lingkungan nyata.
+      </p>
     </div>
-    <div class="footer__links">
-      <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="contact.html">Kontak</a>
-    </div>
-    <div style="font-size:13px; color:var(--text-dim);">
-      &copy; 2026 Faraytodi Atmajaya. Dibangun secara mandiri.
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
+      <div class="footer__links">
+        <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+      <div style="font-size:12.5px; color:var(--text-faint); font-family:var(--font-mono);">
+        &copy; 2026 Faraytodi Atmajaya &bull; Hak Cipta Dilindungi
+      </div>
     </div>
   </div>
 </footer>

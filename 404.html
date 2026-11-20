@@ -5,30 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>404: Halaman Tidak Ditemukan</title>
 <meta name="robots" content="noindex" />
-<link rel="icon" type="image/png" href="assets/img/logofix.png">
-<link rel="apple-touch-icon" href="assets/img/logofix.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/logofix.png?v=3">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=3">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/animations.css">
 </head>
-<body data-page="404">
+<body data-page="404" style="background:#050505;">
 
-<main style="min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;">
-  <div class="reveal is-visible" style="max-width:500px; padding:44px 28px; background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius-md);">
-    <div style="font-family:var(--font-mono); color:var(--cyan); font-size:14px; letter-spacing:0.1em; font-weight:600;">ERROR 404</div>
-    <h1 style="font-size:clamp(30px, 5vw, 42px); font-weight:800; color:var(--text); margin-top:12px;">
+<main style="min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px; position:relative; overflow:hidden;">
+  <div class="text-outline" aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:clamp(120px, 28vw, 320px); font-weight:800; opacity:0.35; pointer-events:none; z-index:0;">
+    404
+  </div>
+
+  <div class="glass-card reveal is-visible" style="max-width:520px; padding:48px 32px; position:relative; z-index:1;">
+    <div style="font-family:var(--font-mono); color:var(--cyan-bright); font-size:13px; letter-spacing:0.18em; font-weight:600;">ERROR 404</div>
+    <h1 style="font-size:clamp(28px, 5vw, 38px); font-weight:800; color:#ffffff; margin-top:10px; line-height:1.2;">
       Halaman Tidak Ditemukan
     </h1>
-    <p style="color:var(--text-dim); margin:14px auto 28px; font-size:15px; line-height:1.65;">
+    <p style="color:var(--text-dim); margin:16px auto 30px; font-size:15px; line-height:1.65;">
       Tautan yang Anda tuju mungkin sudah dipindahkan, dihapus, atau belum pernah tersedia.
     </p>
-    <a href="index.html" class="btn btn--primary">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" style="margin-right:8px; vertical-align:middle;"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Kembali ke Beranda
+    <a href="index.html" class="btn btn--primary" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      Kembali ke Beranda
     </a>
   </div>
 </main>

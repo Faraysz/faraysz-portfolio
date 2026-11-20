@@ -47,31 +47,35 @@ button {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   margin: 0;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-}
-
-em, i {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
 }
 
 p { margin: 0; }
 
 ::selection {
-  background: var(--cyan);
-  color: var(--on-cyan);
+  background: #ffffff;
+  color: #050505;
 }
 
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--surface-hi-2); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #404040; }
 
 :focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid #ffffff;
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* Watermark text outline ala Dimas Irawan */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.12);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* --- Layout helpers --- */
