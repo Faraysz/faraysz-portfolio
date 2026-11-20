@@ -135,10 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroTypewriterEl = document.querySelector('.typewriter-text');
   if (heroTypewriterEl) {
     const heroWords = [
-      'Website Modern',
-      'Aplikasi HP',
-      'Sistem Informasi',
-      'Toko Online'
+      'ruang digital saya.',
+      'sudut kreasi aplikasi.',
+      'tempat eksperimen kode.',
+      'dunia web & mobile.'
     ];
 
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -200,6 +200,17 @@ document.addEventListener('DOMContentLoaded', () => {
       timer = setTimeout(typeLoop, HOLD_TIME);
     }
   }
+
+  /* --- Interactive Playful Cats (Mood Ref: superti4r.net) --- */
+  const catItems = document.querySelectorAll('.hero-cat-item');
+  catItems.forEach((cat) => {
+    cat.addEventListener('click', () => {
+      cat.style.transform = 'translateY(-12px) scale(1.15)';
+      setTimeout(() => {
+        cat.style.transform = '';
+      }, 320);
+    });
+  });
 
   /* --- Form contact: kirim via EmailJS; kalau config belum diisi, fallback WhatsApp --- */
   const form = document.querySelector('[data-contact-form]');
