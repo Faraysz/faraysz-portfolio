@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Tentang: Faraytodi Atmajaya (Faraysz)</title>
-<meta name="description" content="Profil Faraytodi Atmajaya (Faraysz), mahasiswa D4 Teknik Informatika POLIJE yang berfokus pada pengembangan backend Laravel dan aplikasi mobile." />
+<meta name="description" content="Profil Faraytodi Atmajaya (Faraysz), Software Engineer &amp; Fullstack Developer yang berfokus pada pengembangan backend Laravel dan aplikasi mobile." />
 <link rel="canonical" href="https://faraysz.github.io/faraysz-portfolio/about.html">
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logofix.png?v=3">
@@ -23,38 +23,27 @@
   .about-layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
 
   @media (min-width: 900px) {
     .about-layout {
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 56px;
+      gap: 64px;
     }
   }
 
   .principle-box {
-    background: rgba(255, 255, 255, 0.025);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 24px;
-    margin-top: 16px;
-    transition: all 0.25s var(--ease);
-  }
-
-  .principle-box:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.045);
-    transform: translateY(-2px);
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 14px;
   }
 
   .principle-title {
-    font-size: 16.5px;
+    font-size: 16px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-family: var(--font-display);
   }
 
@@ -62,6 +51,12 @@
     font-size: 14px;
     line-height: 1.65;
     color: var(--text-dim);
+  }
+
+  .about-detail-block {
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 24px;
   }
 </style>
 </head>
@@ -76,19 +71,19 @@
     <nav class="navbar__links">
       <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
       <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
-      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link">Teknologi</a>
       <a href="about.html" data-nav="about" class="navbar__link is-active">Tentang</a>
       <a href="contact.html" data-nav="contact" class="navbar__link">Kontak</a>
     </nav>
     <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek." target="_blank" rel="noopener" class="navbar__cta">
-      Hubungi Saya
+      Chat WhatsApp
     </a>
     <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
     <a href="index.html">Beranda</a>
     <a href="projects.html">Proyek</a>
-    <a href="stack.html">Stack</a>
+    <a href="stack.html">Teknologi</a>
     <a href="about.html" class="is-active">Tentang</a>
     <a href="contact.html">Kontak</a>
   </div>
@@ -112,10 +107,10 @@
         
         <div style="margin-top:24px; display:flex; flex-direction:column; gap:18px; font-size:16px; line-height:1.75; color:var(--text-dim);">
           <p>
-            Saya Faraytodi Atmajaya, biasa dipanggil Faraysz. Saat ini saya menempuh studi D4 Teknik Informatika di Politeknik Negeri Jember (POLIJE). Fokus utama saya tertuju pada perancangan arsitektur backend web dengan Laravel, manajemen database relasional MySQL, serta pembuatan antarmuka aplikasi mobile menggunakan Flutter dan React Native.
+            Saya Faraytodi Atmajaya, biasa dipanggil Faraysz. Saya adalah seorang Software Engineer dan Fullstack Developer yang berfokus pada perancangan arsitektur backend web dengan Laravel, pengelolaan basis data relasional MySQL, serta pembangunan antarmuka aplikasi mobile multiplatform menggunakan Flutter dan React Native.
           </p>
           <p>
-            Di samping kegiatan akademik, saya terbiasa mengerjakan proyek freelance dan tugas akhir sistem informasi. Saya percaya bahwa kode yang baik adalah kode yang rapi, mudah dibaca, terdokumentasi, dan benar-benar menyelesaikan masalah penggunanya.
+            Saya terbiasa menangani proyek sistem informasi, perancangan RESTful API yang aman, serta integrasi layanan pihak ketiga. Saya percaya bahwa kode yang baik adalah kode yang rapi, mudah dibaca, terdokumentasi, dan benar-benar menyelesaikan masalah penggunanya secara andal.
           </p>
         </div>
 
@@ -142,25 +137,24 @@
         </div>
       </div>
 
-      <!-- Sisi Kanan: Latar Belakang & Detail -->
+      <!-- Sisi Kanan: Latar Belakang & Detail (Free Text Clean, Tanpa Card) -->
       <div class="reveal is-visible">
-        <div class="glass-card" style="padding:28px; margin-bottom:24px;">
-          <h2 style="font-size:18px; font-weight:700; color:var(--text); margin-bottom:16px; display:flex; align-items:center; gap:8px;">
+        <div class="about-detail-block">
+          <h2 style="font-size:18px; font-weight:700; color:#ffffff; margin-bottom:16px; display:flex; align-items:center; gap:8px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap" style="color:var(--cyan);"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-            Pendidikan Formal
+            Pendidikan &amp; Pelatihan
           </h2>
           <div>
-            <div style="font-weight:600; color:var(--text); font-size:15px;">Politeknik Negeri Jember</div>
+            <div style="font-weight:600; color:#ffffff; font-size:15px;">Politeknik Negeri Jember</div>
             <div style="font-size:13.5px; color:var(--cyan-bright); margin-top:2px;">Diploma IV (D4) Teknik Informatika</div>
-            <div style="font-size:13px; color:var(--text-faint); margin-top:4px;">Agustus 2023 (Aktif)</div>
             <p style="font-size:13.5px; line-height:1.6; color:var(--text-dim); margin-top:10px;">
-              Mata kuliah terkait: Workshop Sistem Informasi Web Framework, Workshop Pengujian Kualitas Perangkat Lunak, dan Basis Data Lanjut.
+              Fokus pembelajaran: Workshop Rekayasa Sistem Web Framework, Pengujian Kualitas Perangkat Lunak, dan Perancangan Basis Data Lanjut.
             </p>
           </div>
         </div>
 
-        <div class="glass-card" style="padding:28px;">
-          <h2 style="font-size:18px; font-weight:700; color:var(--text); margin-bottom:18px; display:flex; align-items:center; gap:8px;">
+        <div class="about-detail-block">
+          <h2 style="font-size:18px; font-weight:700; color:#ffffff; margin-bottom:18px; display:flex; align-items:center; gap:8px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" style="color:var(--cyan);"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
             Penguasaan Teknis
           </h2>
@@ -168,7 +162,7 @@
           <div style="display:flex; flex-direction:column; gap:20px;">
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
-                <span style="font-weight:600; color:var(--text);">Backend &amp; REST API (Laravel)</span>
+                <span style="font-weight:600; color:#ffffff;">Backend &amp; REST API (Laravel)</span>
                 <span style="color:var(--cyan-bright); font-weight:500;">Mahir</span>
               </div>
               <div class="skillbar"><div class="skillbar__fill" data-width="90%" style="width:90%;"></div></div>
@@ -176,7 +170,7 @@
 
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
-                <span style="font-weight:600; color:var(--text);">Mobile Apps (Flutter &amp; React Native)</span>
+                <span style="font-weight:600; color:#ffffff;">Mobile Apps (Flutter &amp; React Native)</span>
                 <span style="color:var(--cyan-bright); font-weight:500;">Menengah</span>
               </div>
               <div class="skillbar"><div class="skillbar__fill" data-width="80%" style="width:80%;"></div></div>
@@ -184,7 +178,7 @@
 
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
-                <span style="font-weight:600; color:var(--text);">Database Relasional (MySQL)</span>
+                <span style="font-weight:600; color:#ffffff;">Database Relasional (MySQL)</span>
                 <span style="color:var(--cyan-bright); font-weight:500;">Mahir</span>
               </div>
               <div class="skillbar"><div class="skillbar__fill" data-width="85%" style="width:85%;"></div></div>
@@ -192,7 +186,7 @@
 
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
-                <span style="font-weight:600; color:var(--text);">Desktop (Java Swing) &amp; QA Testing</span>
+                <span style="font-weight:600; color:#ffffff;">Desktop Java &amp; QA Testing</span>
                 <span style="color:var(--cyan-bright); font-weight:500;">Menengah</span>
               </div>
               <div class="skillbar"><div class="skillbar__fill" data-width="75%" style="width:75%;"></div></div>
@@ -204,18 +198,16 @@
     </div>
   </section>
 
-  <!-- Penutup / Kontak -->
-  <section style="padding-top:20px; padding-bottom:90px;">
-    <div class="container">
-      <div class="glass-card reveal" style="padding:48px 32px; text-align:center; max-width:800px; margin:0 auto;">
-        <h2 style="font-size:clamp(24px, 4vw, 36px); font-weight:800; color:#ffffff; margin-bottom:12px;">Mari Diskusikan Proyek Anda</h2>
-        <p style="color:var(--text-dim); max-width:520px; margin:0 auto 28px; font-size:15.5px; line-height:1.7;">
-          Terbuka untuk diskusi kebutuhan aplikasi web backend, sistem informasi, atau kolaborasi mobile apps multiplatform.
-        </p>
-        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn--primary">Kirim Pesan Sekarang</a>
-          <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20ingin%20konsultasi%20mengenai%20proyek." target="_blank" rel="noopener" class="btn btn--ghost">Chat WhatsApp</a>
-        </div>
+  <!-- Penutup / Kontak (Free Text Clean, Tanpa Card) -->
+  <section style="padding:40px 0 100px;">
+    <div class="container" style="text-align:center; max-width:760px; margin:0 auto;">
+      <h2 style="font-size:clamp(26px, 4vw, 40px); font-weight:800; color:#ffffff; margin-bottom:14px;">Mari Diskusikan Proyek Anda</h2>
+      <p style="color:var(--text-dim); font-size:16px; line-height:1.75; margin-bottom:30px;">
+        Terbuka untuk diskusi kebutuhan aplikasi web, sistem kantor, atau pembuatan aplikasi mobile Android &amp; iOS.
+      </p>
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn--primary">Kirim Pesan Sekarang</a>
+        <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20ingin%20konsultasi%20mengenai%20proyek." target="_blank" rel="noopener" class="btn btn--ghost">Chat WhatsApp</a>
       </div>
     </div>
   </section>

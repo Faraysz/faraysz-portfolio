@@ -41,7 +41,7 @@
   --font-mono: "Space Mono", "JetBrains Mono", ui-monospace, monospace;
 
   /* Layout & Measurements */
-  --container-max: 1180px;
+  --container-max: 1200px;
   --gutter: 24px;
   --space-mobile: 20px;
   --space-desktop: 40px;

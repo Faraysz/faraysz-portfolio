@@ -131,6 +131,76 @@ document.addEventListener('DOMContentLoaded', () => {
     tick();
   });
 
+  /* --- Hero Headline Typewriter (v4) --- */
+  const heroTypewriterEl = document.querySelector('.typewriter-text');
+  if (heroTypewriterEl) {
+    const heroWords = [
+      'Website Modern',
+      'Aplikasi HP',
+      'Sistem Informasi',
+      'Toko Online'
+    ];
+
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (motionQuery.matches) {
+      heroTypewriterEl.textContent = heroWords[0];
+    } else {
+      let wordIdx = 0;
+      let charIdx = heroWords[0].length;
+      let isDeleting = false;
+      let timer = null;
+      let isVisible = true;
+
+      const TYPE_SPEED = 70;   // ~70ms per huruf ngetik
+      const HOLD_TIME = 2000;  // ~2s tahan penuh
+      const DELETE_SPEED = 40; // ~40ms per huruf hapus
+      const PAUSE_TIME = 400;  // ~400ms jeda sebelum frasa berikutnya
+
+      const typeLoop = () => {
+        if (!isVisible) return;
+        const currentWord = heroWords[wordIdx];
+
+        if (!isDeleting) {
+          charIdx++;
+          heroTypewriterEl.textContent = currentWord.slice(0, charIdx);
+
+          if (charIdx >= currentWord.length) {
+            isDeleting = true;
+            timer = setTimeout(typeLoop, HOLD_TIME);
+            return;
+          }
+          timer = setTimeout(typeLoop, TYPE_SPEED);
+        } else {
+          charIdx--;
+          heroTypewriterEl.textContent = currentWord.slice(0, charIdx);
+
+          if (charIdx <= 0) {
+            isDeleting = false;
+            wordIdx = (wordIdx + 1) % heroWords.length;
+            timer = setTimeout(typeLoop, PAUSE_TIME);
+            return;
+          }
+          timer = setTimeout(typeLoop, DELETE_SPEED);
+        }
+      };
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          isVisible = false;
+          if (timer) clearTimeout(timer);
+        } else {
+          if (!isVisible) {
+            isVisible = true;
+            typeLoop();
+          }
+        }
+      });
+
+      isDeleting = true;
+      timer = setTimeout(typeLoop, HOLD_TIME);
+    }
+  }
+
   /* --- Form contact: kirim via EmailJS; kalau config belum diisi, fallback WhatsApp --- */
   const form = document.querySelector('[data-contact-form]');
   if (form) {

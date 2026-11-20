@@ -37,7 +37,7 @@
 
   .stack-category-title::before {
     content: "";
-    width: 4px;
+    width: 3px;
     height: 18px;
     background: var(--cyan);
     border-radius: 2px;
@@ -46,36 +46,29 @@
   .tech-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  @media (min-width: 640px) {
-    .tech-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 992px) {
-    .tech-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    gap: 0;
   }
 
   .tech-card {
-    background: rgba(255, 255, 255, 0.025);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
-    padding: 24px;
-    transition: all 0.3s var(--ease);
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    padding: 24px 0;
+    transition: border-color 0.25s var(--ease);
+  }
+
+  .tech-card:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .tech-card:hover {
-    border-color: rgba(255, 255, 255, 0.22);
-    background: rgba(255, 255, 255, 0.045);
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.04);
+    border-top-color: rgba(255, 255, 255, 0.24);
+    background: none;
+    transform: none;
+    box-shadow: none;
   }
 
   .tech-name {
@@ -83,6 +76,17 @@
     font-size: 16.5px;
     color: #ffffff;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .tech-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-dim);
+  }
+</style>
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-display);
@@ -107,19 +111,19 @@
     <nav class="navbar__links">
       <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
       <a href="projects.html" data-nav="projects" class="navbar__link">Proyek</a>
-      <a href="stack.html" data-nav="stack" class="navbar__link is-active">Stack</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link is-active">Teknologi</a>
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
       <a href="contact.html" data-nav="contact" class="navbar__link">Kontak</a>
     </nav>
     <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek." target="_blank" rel="noopener" class="navbar__cta">
-      Hubungi Saya
+      Chat WhatsApp
     </a>
     <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
     <a href="index.html">Beranda</a>
     <a href="projects.html">Proyek</a>
-    <a href="stack.html" class="is-active">Stack</a>
+    <a href="stack.html" class="is-active">Teknologi</a>
     <a href="about.html">Tentang</a>
     <a href="contact.html">Kontak</a>
   </div>

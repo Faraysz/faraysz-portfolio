@@ -20,39 +20,71 @@
 <link rel="stylesheet" href="assets/css/animations.css">
 
 <style>
-  .project-item {
-    background: rgba(255, 255, 255, 0.025);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 30px;
-    transition: all 0.3s var(--ease);
+  .project-grid {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 0;
+  }
+
+  .project-item {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    padding: 36px 0;
+    transition: border-color 0.25s var(--ease);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .project-item:hover {
-    border-color: rgba(255, 255, 255, 0.22);
-    background: rgba(255, 255, 255, 0.045);
-    transform: translateY(-2px);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.04);
+    border-top-color: rgba(255, 255, 255, 0.25);
+    background: none;
+    transform: none;
+    box-shadow: none;
   }
 
   .filter-bar {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-top: 28px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 6px;
-    border-radius: 9999px;
-    width: fit-content;
+    margin-top: 24px;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
   .filter-btn {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dim);
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s var(--ease);
+    cursor: pointer;
+  }
+
+  .filter-btn:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .filter-btn.is-active {
+    color: #050505;
+    background: #ffffff;
+    border-color: #ffffff;
+    font-weight: 600;
+  }
+</style>
     padding: 8px 18px;
     border-radius: 9999px;
     font-size: 13px;
@@ -101,19 +133,19 @@
     <nav class="navbar__links">
       <a href="index.html" data-nav="home" class="navbar__link">Beranda</a>
       <a href="projects.html" data-nav="projects" class="navbar__link is-active">Proyek</a>
-      <a href="stack.html" data-nav="stack" class="navbar__link">Stack</a>
+      <a href="stack.html" data-nav="stack" class="navbar__link">Teknologi</a>
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
       <a href="contact.html" data-nav="contact" class="navbar__link">Kontak</a>
     </nav>
     <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek." target="_blank" rel="noopener" class="navbar__cta">
-      Hubungi Saya
+      Chat WhatsApp
     </a>
     <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
     <a href="index.html">Beranda</a>
     <a href="projects.html" class="is-active">Proyek</a>
-    <a href="stack.html">Stack</a>
+    <a href="stack.html">Teknologi</a>
     <a href="about.html">Tentang</a>
     <a href="contact.html">Kontak</a>
   </div>
@@ -154,7 +186,7 @@
         <article class="project-item" data-category="mobile">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-              <span class="tag tag--amber">Semester 5 POLIJE</span>
+              <span class="tag tag--amber">Mobile &amp; IoT</span>
               <span style="font-size:12px; color:var(--text-faint);">2024</span>
             </div>
             <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">Monitoring Tambak Udang</h2>
@@ -179,7 +211,7 @@
         <article class="project-item" data-category="web">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-              <span class="tag tag--cyan">Semester 4 POLIJE</span>
+              <span class="tag tag--cyan">Backend System</span>
               <span style="font-size:12px; color:var(--text-faint);">2024</span>
             </div>
             <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">ADEK: Backend Website &amp; API</h2>
@@ -255,12 +287,12 @@
         <article class="project-item" data-category="desktop">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-              <span class="tag tag--violet">Semester 1 &amp; 2 POLIJE</span>
+              <span class="tag tag--violet">Desktop Java</span>
               <span style="font-size:12px; color:var(--text-faint);">Desktop</span>
             </div>
             <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">D-Kost Desktop Application</h2>
             <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-              Aplikasi desktop berbasis Java NetBeans dan MySQL untuk pencatatan kamar dan penghuni kos. Dilanjutkan dengan pengujian mutu perangkat lunak pada semester 2.
+              Aplikasi desktop berbasis Java NetBeans dan MySQL untuk pencatatan kamar dan penghuni kos. Dilanjutkan dengan rangkaian pengujian mutu perangkat lunak (black-box &amp; regression testing).
             </p>
           </div>
           <div>
