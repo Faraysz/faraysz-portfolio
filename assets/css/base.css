@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BASE — reset, tipografi, elemen dasar
+   BASE: reset, tipografi, elemen dasar
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }

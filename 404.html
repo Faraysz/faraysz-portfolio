@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>404 — Halaman Tidak Ditemukan</title>
+<title>404: Halaman Tidak Ditemukan</title>
 <meta name="robots" content="noindex" />
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
@@ -11,7 +11,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
@@ -19,20 +19,18 @@
 </head>
 <body data-page="404">
 
-<main style="min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px; position:relative; overflow:hidden;">
-  <div class="glow-blob" style="width:420px; height:420px; top:-120px; left:-120px; background:rgba(0,219,231,0.10);"></div>
-  <div class="glow-blob" style="width:380px; height:380px; bottom:-140px; right:-120px; background:rgba(138,75,255,0.10);"></div>
-
-  <div class="reveal is-visible" style="position:relative;">
-    <p class="mono" style="color:var(--cyan); font-size:14px; letter-spacing:0.12em;">ERROR 404</p>
-    <h1 style="font-size:clamp(36px,6vw,56px); margin-top:14px;">
-      Halaman <span class="text-gradient">hilang.</span>
+<main style="min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px;">
+  <div class="reveal is-visible" style="max-width:500px; padding:44px 28px; background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius-md);">
+    <div style="font-family:var(--font-mono); color:var(--cyan); font-size:14px; letter-spacing:0.1em; font-weight:600;">ERROR 404</div>
+    <h1 style="font-size:clamp(30px, 5vw, 42px); font-weight:800; color:var(--text); margin-top:12px;">
+      Halaman Tidak Ditemukan
     </h1>
-    <p class="text-dim" style="max-width:440px; margin:16px auto 30px; line-height:1.7;">
-      Alamat yang kamu tuju tidak ditemukan — mungkin sudah dipindah,
-      atau memang belum pernah ada.
+    <p style="color:var(--text-dim); margin:14px auto 28px; font-size:15px; line-height:1.65;">
+      Tautan yang Anda tuju mungkin sudah dipindahkan, dihapus, atau belum pernah tersedia.
     </p>
-    <a href="index.html" class="btn btn--primary">Kembali ke Beranda</a>
+    <a href="index.html" class="btn btn--primary">
+      Kembali ke Beranda
+    </a>
   </div>
 </main>
 

@@ -3,15 +3,56 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tentang — Faraysz</title>
-<meta name="description" content="Tentang Faraytodi Atmajaya (Faraysz), mahasiswa D4 Teknik Informatika POLIJE dan full stack engineer." />
+<title>Tentang: Faraytodi Atmajaya (Faraysz)</title>
+<meta name="description" content="Profil Faraytodi Atmajaya (Faraysz), mahasiswa D4 Teknik Informatika POLIJE yang berfokus pada pengembangan backend Laravel dan aplikasi mobile." />
+<link rel="canonical" href="https://faraysz.github.io/faraysz-portfolio/about.html">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/animations.css">
+
+<style>
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: 900px) {
+    .about-layout {
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+    }
+  }
+
+  .principle-box {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-top: 16px;
+  }
+
+  .principle-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .principle-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-dim);
+  }
+</style>
 </head>
 <body data-page="about">
 
@@ -25,7 +66,7 @@
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
     </nav>
     <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
-    <button class="navbar__toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
     <a href="index.html" data-nav="home">Beranda</a>
@@ -36,89 +77,130 @@
   </div>
 </header>
 
-<main style="padding-top:76px;">
-  <section>
-    <div class="container" style="display:grid; grid-template-columns:1fr; gap:32px;">
-      <div>
-        <span class="eyebrow reveal is-visible">Kenalan</span>
-        <h1 class="reveal is-visible" style="font-size:clamp(30px,5vw,44px); margin-top:14px; line-height:1.15;">
-          Menjembatani ide kuliah, klien, dan kode yang jalan di produksi.
+<main style="padding-top:72px;">
+
+  <section style="padding-bottom:30px;">
+    <div class="container about-layout">
+      
+      <!-- Bio Utama -->
+      <div class="reveal is-visible">
+        <h1 style="font-size:clamp(32px, 5vw, 44px); font-weight:800; color:var(--text); line-height:1.15;">
+          Pengembang Fullstack Web &amp; Mobile di Jember.
         </h1>
-        <div class="reveal is-visible" style="max-width:640px; margin-top:24px; display:flex; flex-direction:column; gap:16px;">
-          <p class="text-dim" style="font-size:17px; line-height:1.7;">
-            Saya Faraytodi Atmajaya, biasa dipanggil Faraysz — mahasiswa D4 Teknik Informatika di Politeknik Negeri Jember (POLIJE). Fokus saya di pengembangan fullstack: Laravel di sisi backend, React Native dan Flutter untuk mobile, ditambah eksplorasi IoT dan Machine Learning.
+        
+        <div style="margin-top:24px; display:flex; flex-direction:column; gap:18px; font-size:16px; line-height:1.75; color:var(--text-dim);">
+          <p>
+            Saya Faraytodi Atmajaya, biasa dipanggil Faraysz. Saat ini saya menempuh studi D4 Teknik Informatika di Politeknik Negeri Jember (POLIJE). Fokus utama saya tertuju pada perancangan arsitektur backend web dengan Laravel, manajemen database relasional MySQL, serta pembuatan antarmuka aplikasi mobile menggunakan Flutter dan React Native.
           </p>
-          <p class="text-dim" style="font-size:17px; line-height:1.7;">
-            Di luar tugas kuliah, saya juga mengerjakan proyek freelance/joki untuk klien — mulai dari sistem informasi, dashboard admin, sampai automasi testing. Saya percaya kode yang baik itu kode yang mudah dipahami dan mudah diubah.
+          <p>
+            Di samping kegiatan akademik, saya terbiasa mengerjakan proyek freelance dan tugas akhir sistem informasi. Saya percaya bahwa kode yang baik adalah kode yang rapi, mudah dibaca, terdokumentasi, dan benar-benar menyelesaikan masalah penggunanya.
           </p>
         </div>
+
+        <div style="margin-top:36px;">
+          <h2 style="font-size:20px; font-weight:700; color:var(--text); margin-bottom:16px;">Prinsip Pengembangan</h2>
+          
+          <div class="principle-box">
+            <div class="principle-title">1. Kejelasan Arsitektur &amp; Database</div>
+            <div class="principle-desc">Merancang skema relasi dan API yang modular sejak awal agar aplikasi mudah dikembangkan lebih lanjut.</div>
+          </div>
+
+          <div class="principle-box">
+            <div class="principle-title">2. Komunikasi Terbuka &amp; Transparan</div>
+            <div class="principle-desc">Selalu memberikan pembaruan berkala mengenai perkembangan proyek melalui WhatsApp atau repositori Git.</div>
+          </div>
+
+          <div class="principle-box">
+            <div class="principle-title">3. Pengujian Fungsi Menyeluruh</div>
+            <div class="principle-desc">Memastikan alur transaksi, validasi formulir, dan penanganan galat berjalan stabil sebelum diserahkan.</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Sisi Kanan: Latar Belakang & Detail -->
+      <div class="reveal is-visible">
+        <div class="card" style="padding:28px; background:var(--bg-elevated); margin-bottom:24px;">
+          <h2 style="font-size:18px; font-weight:700; color:var(--text); margin-bottom:16px;">Pendidikan Formal</h2>
+          <div>
+            <div style="font-weight:600; color:var(--text); font-size:15px;">Politeknik Negeri Jember</div>
+            <div style="font-size:13.5px; color:var(--cyan-bright); margin-top:2px;">Diploma IV (D4) Teknik Informatika</div>
+            <div style="font-size:13px; color:var(--text-faint); margin-top:4px;">Agustus 2023 (Aktif)</div>
+            <p style="font-size:13.5px; line-height:1.6; color:var(--text-dim); margin-top:10px;">
+              Mata kuliah terkait: Workshop Sistem Informasi Web Framework, Workshop Pengujian Kualitas Perangkat Lunak, dan Basis Data Lanjut.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="padding:28px; background:var(--bg-elevated);">
+          <h2 style="font-size:18px; font-weight:700; color:var(--text); margin-bottom:18px;">Penguasaan Teknis</h2>
+          
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
+                <span style="font-weight:600; color:var(--text);">Backend &amp; REST API (Laravel)</span>
+                <span style="color:var(--cyan-bright); font-weight:500;">Mahir</span>
+              </div>
+              <div class="skillbar"><div class="skillbar__fill" data-width="90%" style="width:90%;"></div></div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
+                <span style="font-weight:600; color:var(--text);">Mobile Apps (Flutter &amp; React Native)</span>
+                <span style="color:var(--cyan-bright); font-weight:500;">Menengah</span>
+              </div>
+              <div class="skillbar"><div class="skillbar__fill" data-width="80%" style="width:80%;"></div></div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
+                <span style="font-weight:600; color:var(--text);">Database Relasional (MySQL)</span>
+                <span style="color:var(--cyan-bright); font-weight:500;">Mahir</span>
+              </div>
+              <div class="skillbar"><div class="skillbar__fill" data-width="85%" style="width:85%;"></div></div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13.5px;">
+                <span style="font-weight:600; color:var(--text);">Desktop (Java Swing) &amp; QA Testing</span>
+                <span style="color:var(--cyan-bright); font-weight:500;">Menengah</span>
+              </div>
+              <div class="skillbar"><div class="skillbar__fill" data-width="75%" style="width:75%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section style="padding-top:0;">
+  <!-- Penutup / Kontak -->
+  <section style="padding-top:20px; padding-bottom:70px;">
     <div class="container">
-      <h2 class="reveal" style="font-size:22px; margin-bottom:28px;">Kemampuan Teknis</h2>
-      <div class="reveal-stagger" style="display:flex; flex-direction:column; gap:28px; max-width:640px;">
-
-        <div>
-          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span style="font-weight:600; color:var(--cyan);">Backend &amp; Database</span>
-            <span class="text-dim mono" style="font-size:12px;">Mahir</span>
-          </div>
-          <div class="skillbar"><div class="skillbar__fill" data-width="92%"></div></div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
-            <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">REST API</span>
-          </div>
-        </div>
-
-        <div>
-          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span style="font-weight:600; color:var(--cyan);">Mobile Development</span>
-            <span class="text-dim mono" style="font-size:12px;">Menengah–Mahir</span>
-          </div>
-          <div class="skillbar"><div class="skillbar__fill" data-width="80%"></div></div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
-            <span class="tag">React Native</span><span class="tag">Flutter</span><span class="tag">Java</span>
-          </div>
-        </div>
-
-        <div>
-          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span style="font-weight:600; color:var(--cyan);">IoT &amp; Machine Learning</span>
-            <span class="text-dim mono" style="font-size:12px;">Sedang Berkembang</span>
-          </div>
-          <div class="skillbar"><div class="skillbar__fill" data-width="55%"></div></div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
-            <span class="tag">IoT</span><span class="tag">Python</span><span class="tag">NLP</span>
-          </div>
-        </div>
-
+      <div class="card reveal" style="padding:40px 28px; text-align:center; max-width:800px; margin:0 auto; background:var(--bg-elevated);">
+        <h2 style="font-size:24px; font-weight:700; color:var(--text); margin-bottom:12px;">Mari Diskusikan Proyek Anda</h2>
+        <p style="color:var(--text-dim); max-width:500px; margin:0 auto 24px; font-size:15px; line-height:1.7;">
+          Terbuka untuk diskusi kebutuhan aplikasi web, sistem informasi, atau kolaborasi mobile apps.
+        </p>
+        <a href="contact.html" class="btn btn--primary">Kirim Pesan</a>
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0;">
-    <div class="container">
-      <div class="card reveal" style="padding:48px 32px; text-align:center;">
-        <h2 style="font-size:clamp(24px,3vw,32px); margin-bottom:14px;">Mari diskusikan proyek Anda</h2>
-        <p class="text-dim" style="max-width:480px; margin:0 auto 24px;">Terbuka untuk kolaborasi, tugas joki, maupun proyek freelance jangka panjang.</p>
-        <a href="contact.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Hubungi Saya</a>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="footer">
   <div class="container footer__inner">
-    <span class="mono" style="color:var(--cyan);">&lt;/&gt; Faraysz</span>
+    <div style="font-weight:700; color:var(--text); font-size:15px;">
+      <span style="color:var(--cyan);">&lt;/&gt;</span> Faraysz
+    </div>
     <div class="footer__links">
-      <a href="https://github.com/faraysz" target="_blank" rel="noopener">Github</a>
+      <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
-      
       <a href="contact.html">Kontak</a>
     </div>
-    <p class="text-dim" style="font-size:13px;">© 2026 Faraysz. Dibangun dengan presisi.</p>
+    <div style="font-size:13px; color:var(--text-dim);">
+      &copy; 2026 Faraytodi Atmajaya. Dibangun secara mandiri.
+    </div>
   </div>
 </footer>
 

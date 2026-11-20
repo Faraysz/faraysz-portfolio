@@ -3,16 +3,66 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kontak — Faraysz</title>
-<meta name="description" content="Hubungi Faraysz untuk proyek freelance, joki, atau kolaborasi." />
+<title>Kontak: Faraysz (Hubungi Langsung)</title>
+<meta name="description" content="Hubungi Faraytodi Atmajaya (Faraysz) untuk konsultasi proyek web Laravel, aplikasi mobile Flutter & React Native, atau kolaborasi teknis." />
+<link rel="canonical" href="https://faraysz.github.io/faraysz-portfolio/contact.html">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/animations.css">
 
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    max-width: 960px;
+    margin: 36px auto 0;
+  }
+
+  @media (min-width: 860px) {
+    .contact-layout {
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+    }
+  }
+
+  .direct-link-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: all 0.2s var(--ease);
+    text-decoration: none;
+    margin-bottom: 12px;
+  }
+
+  .direct-link-item:hover {
+    border-color: var(--cyan);
+    background: var(--surface-hi);
+    color: var(--cyan-bright);
+    transform: translateX(3px);
+  }
+
+  .direct-link-icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+  }
+</style>
 </head>
 <body data-page="contact">
 
@@ -26,7 +76,7 @@
       <a href="about.html" data-nav="about" class="navbar__link">Tentang</a>
     </nav>
     <a href="contact.html" class="navbar__cta">Hubungi Saya</a>
-    <button class="navbar__toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    <button class="navbar__toggle" aria-label="Buka menu navigasi"><span></span><span></span><span></span></button>
   </div>
   <div class="navbar__mobile">
     <a href="index.html" data-nav="home">Beranda</a>
@@ -37,105 +87,145 @@
   </div>
 </header>
 
-<main style="padding-top:76px;">
-  <section style="padding-bottom:24px; text-align:center;">
-    <div class="container">
-      <span class="eyebrow reveal is-visible">Kontak</span>
-      <h1 class="reveal is-visible" style="font-size:clamp(30px,5vw,44px); margin-top:14px;">Mari mulai obrolan.</h1>
-      <p class="reveal is-visible text-dim" style="max-width:520px; margin:12px auto 0;">Untuk proyek freelance, joki tugas, atau sekadar diskusi teknis — isi form di bawah atau hubungi langsung.</p>
-    </div>
-  </section>
+<main style="padding-top:72px;">
 
-  <section style="padding-top:0;">
-    <div class="container" style="display:grid; grid-template-columns:1fr; gap:40px; max-width:900px; margin:0 auto;">
-
-      <form class="card reveal" data-contact-form style="padding:36px;">
-        <!-- Alert message (hidden by default) -->
-        <div id="form-alert" style="display:none; padding:14px 18px; border-radius:8px; margin-bottom:20px; font-size:14px;"></div>
-
-        <div class="field">
-          <label for="name">Nama Lengkap</label>
-          <input id="name" name="name" type="text" placeholder="Nama Anda" required>
-        </div>
-        <div class="field">
-          <label for="email">Alamat Email</label>
-          <input id="email" name="email" type="email" placeholder="nama@email.com" required>
-        </div>
-        <div class="field">
-          <label for="subject">Jenis Proyek</label>
-          <select id="subject" name="subject">
-            <option>Web (Laravel)</option>
-            <option>Mobile (React Native / Flutter)</option>
-            <option>Joki Tugas Kuliah</option>
-            <option>Lainnya</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="message">Pesan</label>
-          <textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan dan timeline Anda..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary" style="width:100%;">Kirim Pesan</button>
-      </form>
-
-      <div class="reveal" style="display:flex; flex-direction:column; gap:20px;">
-        <div class="card" style="padding:28px;">
-          <h3 style="font-size:16px; color:var(--cyan); margin-bottom:16px;">Kontak Langsung</h3>
-          
-          <a href="mailto:faraytodiatmajaya@gmail.com" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); margin-bottom:12px; transition: color 0.2s ease;">
-            <span style="font-size:20px;">📧</span>
-            <span>Mail</span>
-          </a>
-          
-          <a href="https://github.com/faraysz" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); margin-bottom:12px; transition: color 0.2s ease;">
-            <span style="font-size:20px;">💻</span>
-            <span>Github</span>
-          </a>
-          
-          <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); margin-bottom:12px; transition: color 0.2s ease;">
-            <span style="font-size:20px;">💼</span>
-            <span>LinkedIn</span>
-          </a>
-          
-          <a href="https://wa.me/6282333000472" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; color:var(--text-dim); transition: color 0.2s ease;">
-            <span style="font-size:20px;">💬</span>
-            <span>WhatsApp</span>
-          </a>
-        </div>
-        <div class="card" style="padding:28px;">
-          <h3 style="font-size:16px; color:var(--cyan); margin-bottom:10px;">Waktu Respons</h3>
-          <p class="text-dim" style="font-size:14px; line-height:1.7;">Biasanya membalas dalam 1x24 jam. Untuk kebutuhan mendesak (deadline joki), sebutkan tenggat waktu di pesan.</p>
-        </div>
+  <section style="padding-bottom:10px;">
+    <div class="container" style="text-align:center;">
+      <div class="reveal is-visible" style="max-width:640px; margin:0 auto;">
+        <h1 style="font-size:clamp(32px, 5vw, 44px); font-weight:800; color:var(--text);">
+          Mulai Percakapan
+        </h1>
+        <p style="color:var(--text-dim); margin-top:12px; font-size:16px; line-height:1.7;">
+          Punya rencana proyek pembuatan website, aplikasi mobile, atau kebutuhan sistem informasi? Silakan kirim pesan melalui form di bawah atau hubungi langsung.
+        </p>
       </div>
-
     </div>
   </section>
+
+  <section style="padding-top:10px; padding-bottom:80px;">
+    <div class="container">
+      <div class="contact-layout reveal is-visible">
+
+        <!-- Formulir Pesan -->
+        <form class="card" data-contact-form style="padding:32px; background:var(--bg-elevated);">
+          <!-- Alert Notifikasi -->
+          <div id="form-alert" style="display:none; padding:12px 16px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:14px;"></div>
+
+          <div class="field">
+            <label for="name">Nama Lengkap</label>
+            <input id="name" name="name" type="text" placeholder="Masukkan nama Anda" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Alamat Email</label>
+            <input id="email" name="email" type="email" placeholder="nama@perusahaan.com" required>
+          </div>
+
+          <div class="field">
+            <label for="subject">Kategori Kebutuhan</label>
+            <select id="subject" name="subject">
+              <option value="Web Backend (Laravel)">Web Backend &amp; REST API (Laravel)</option>
+              <option value="Mobile App (Flutter/React Native)">Aplikasi Mobile (Flutter / React Native)</option>
+              <option value="Aplikasi Desktop (Java)">Aplikasi Desktop (Java)</option>
+              <option value="Kolaborasi Proyek">Kolaborasi Proyek / Lainnya</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Pesan atau Rincian Proyek</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ceritakan fitur apa yang ingin dibuat, target waktu, atau tautan referensi..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%; padding:14px; font-size:15px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            Kirim Pesan Sekarang
+          </button>
+        </form>
+
+        <!-- Kontak Langsung -->
+        <div>
+          <div class="card" style="padding:28px; background:var(--bg-elevated); margin-bottom:20px;">
+            <h2 style="font-size:17px; font-weight:700; color:var(--text); margin-bottom:18px;">Kanal Langsung</h2>
+
+            <a href="https://wa.me/6282333000472?text=Halo%20Faraysz,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek%20aplikasi." target="_blank" rel="noopener" class="direct-link-item">
+              <span class="direct-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span>WhatsApp: +62 823-3300-0472</span>
+            </a>
+
+            <a href="mailto:E41230453@student.polije.ac.id" class="direct-link-item">
+              <span class="direct-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </span>
+              <span>E41230453@student.polije.ac.id</span>
+            </a>
+
+            <a href="mailto:faraytodiatmajaya@gmail.com" class="direct-link-item">
+              <span class="direct-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <span>faraytodiatmajaya@gmail.com</span>
+            </a>
+
+            <a href="https://github.com/faraysz" target="_blank" rel="noopener" class="direct-link-item">
+              <span class="direct-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </span>
+              <span>GitHub: @faraysz</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="direct-link-item">
+              <span class="direct-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <span>LinkedIn: Faraytodi Atmajaya</span>
+            </a>
+          </div>
+
+          <div class="card" style="padding:24px; background:var(--bg-elevated);">
+            <div style="font-weight:700; font-size:15px; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Waktu Respons</span>
+            </div>
+            <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim);">
+              Saya biasanya membalas pesan dalam waktu beberapa jam pada hari kerja. Untuk respons paling cepat, silakan hubungi langsung via WhatsApp.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <div class="container footer__inner">
-    <span class="mono" style="color:var(--cyan);">&lt;/&gt; Faraysz</span>
+    <div style="font-weight:700; color:var(--text); font-size:15px;">
+      <span style="color:var(--cyan);">&lt;/&gt;</span> Faraysz
+    </div>
     <div class="footer__links">
-      <a href="https://github.com/faraysz" target="_blank" rel="noopener">Github</a>
+      <a href="https://github.com/faraysz" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/atmajaya?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
-      
       <a href="contact.html">Kontak</a>
     </div>
-    <p class="text-dim" style="font-size:13px;">© 2026 Faraysz. Dibangun dengan presisi.</p>
+    <div style="font-size:13px; color:var(--text-dim);">
+      &copy; 2026 Faraytodi Atmajaya. Dibangun secara mandiri.
+    </div>
   </div>
 </footer>
 
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<!-- EmailJS Config (API Keys) - File ini di .gitignore -->
 <script src="assets/js/emailjs-config.js"></script>
 <script>
-  // Initialize EmailJS dengan Public Key dari config
   (function(){
-    emailjs.init(EMAILJS_CONFIG.publicKey);
+    if (typeof EMAILJS_CONFIG !== 'undefined' && EMAILJS_CONFIG.publicKey) {
+      emailjs.init(EMAILJS_CONFIG.publicKey);
+    }
   })();
 </script>
-
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
