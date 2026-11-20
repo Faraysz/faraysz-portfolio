@@ -24,37 +24,6 @@
   <link rel="stylesheet" href="assets/css/animations.css">
 
   <style>
-    .project-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .project-item {
-      background: none;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 0;
-      padding: 36px 0;
-      transition: border-color 0.25s var(--ease);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .project-item:last-child {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .project-item:hover {
-      border-top-color: rgba(255, 255, 255, 0.25);
-      background: none;
-      transform: none;
-      box-shadow: none;
-    }
-
     .filter-bar {
       display: flex;
       gap: 10px;
@@ -69,9 +38,9 @@
       font-size: 13.5px;
       font-weight: 500;
       color: var(--text-dim);
-      padding: 6px 14px;
-      border-radius: 6px;
-      background: none;
+      padding: 7px 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.2s var(--ease);
       cursor: pointer;
@@ -79,7 +48,8 @@
 
     .filter-btn:hover {
       color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.07);
     }
 
     .filter-btn.is-active {
@@ -152,215 +122,315 @@
       </div>
     </section>
 
-    <section style="padding-top:10px; padding-bottom:70px;">
+    <section style="padding-top:20px; padding-bottom:90px;">
       <div class="container">
-        <div class="project-grid reveal-stagger">
+        <div class="project-cards-grid reveal-stagger">
 
           <!-- 1. Monitoring Tambak Udang -->
-          <article class="project-item" data-category="mobile">
-            <div>
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                <span class="tag tag--amber">Mobile &amp; IoT</span>
-                <span style="font-size:12px; color:var(--text-faint);">2024</span>
+          <article class="project-card" data-category="mobile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Buka detail proyek Aplikasi Monitoring Tambak Udang Otomatis" data-project-details='{"title":"Aplikasi Monitoring Tambak Udang Otomatis","badge":"Mobile &amp; IoT Telemetri","year":"2024","desc":"Aplikasi mobile terintegrasi alat sensor IoT untuk petambak udang memantau parameter kualitas air kolam (suhu, pH, salinitas, dan DO) secara realtime langsung dari ponsel.","challenge":"Petambak sebelumnya harus mengukur suhu dan salinitas air secara manual dengan mencelupkan termometer berkali-kali ke kolam setiap beberapa jam. Keterlambatan penanganan perubahan suhu atau pH drastis dapat menyebabkan stres dan kematian massal pada benih udang.","features":["Monitoring realtime data suhu, pH, salinitas, dan oksigen terlarut (DO) langsung dari sensor IoT.","Sistem alarm peringatan dini otomatis ke HP petambak jika kondisi air melewati ambang batas aman.","Grafik riwayat fluktuasi air per jam, hari, dan minggu untuk evaluasi panen budidaya.","Antarmuka ramah pengguna yang simpel dan cepat dipahami staf lapangan."],"tags":["React Native","IoT Telemetry","RESTful API","MQTT","ESP32"],"url":"https://github.com/faraysz","urlText":"Kunjungi Repositori GitHub"}'>
+            <div class="project-card__thumb">
+              <div class="project-card__thumb-bg" style="background: radial-gradient(circle at center, rgba(56, 189, 248, 0.25) 0%, transparent 70%);"></div>
+              <div class="project-card__mockup">
+                <div class="mockup-mini-header">
+                  <div class="mockup-mini-dots"><span></span><span></span><span></span></div>
+                  <span class="mockup-mini-status">● Live Telemetri</span>
+                </div>
+                <div class="mockup-mini-grid">
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">28.4°C</div>
+                    <div class="mockup-mini-lbl">Suhu Kolam</div>
+                  </div>
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">7.8 pH</div>
+                    <div class="mockup-mini-lbl">Kadar Asam</div>
+                  </div>
+                </div>
               </div>
-              <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">Monitoring Tambak Udang</h2>
-              <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-                Aplikasi mobile React Native terintegrasi telemetri IoT untuk memonitor parameter air tambak secara
-                realtime dengan antarmuka yang bersih dan responsif.
-              </p>
             </div>
-            <div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap; margin:16px 0 20px;">
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge">Mobile &amp; IoT</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">Aplikasi Monitoring Tambak Udang</h3>
+              <p class="project-card__desc">
+                Aplikasi mobile React Native terintegrasi telemetri IoT untuk memonitor parameter air tambak secara realtime dengan antarmuka yang bersih dan responsif.
+              </p>
+              <div class="project-card__tags">
                 <span class="tag">React Native</span>
                 <span class="tag">IoT Telemetry</span>
                 <span class="tag">REST API</span>
               </div>
-              <a href="https://github.com/faraysz" target="_blank" rel="noopener" class="btn btn--ghost"
-                style="padding:8px 16px; font-size:13px; width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-github">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                Tinjau di GitHub
-              </a>
+              <div class="project-card__action">
+                <span>Klik untuk detail lengkap</span>
+                <div class="project-card__action-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 2. ADEK Backend -->
-          <article class="project-item" data-category="web">
-            <div>
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                <span class="tag tag--cyan">Backend System</span>
-                <span style="font-size:12px; color:var(--text-faint);">2024</span>
+          <article class="project-card" data-category="web" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Buka detail proyek Sistem ADEK Pengatur Pola Makan Sehat" data-project-details='{"title":"Sistem ADEK: Pengatur Pola Makan &amp; Pembayaran Digital","badge":"Website &amp; Payment Gateway","year":"2024","desc":"Platform kesehatan berbasis web yang mengotomasi perhitungan kebutuhan nutrisi harian, pemilihan katering sehat, dan proses transaksi pembayaran paket langganan secara online.","challenge":"Banyak orang kesulitan menghitung target kalori harian yang sesuai dengan kondisi fisik mereka, serta sering terbebani proses pemesanan katering diet yang memerlukan transfer bank manual dengan konfirmasi struk yang rawan kekeliruan.","features":["Kalkulator kebutuhan gizi harian otomatis berbasis data tinggi, berat badan, dan aktivitas harian.","Sistem katalog langganan makanan sehat dengan manajemen jadwal pengiriman katering.","Integrasi Payment Gateway Midtrans (QRIS, VA Bank, E-Wallet) dengan verifikasi transaksi instan.","Dashboard admin untuk memantau status pesanan, mutasi pembayaran, dan laporan pelanggan."],"tags":["Laravel","MySQL Database","Midtrans Payment API","Sanctum Auth","REST API"],"url":"https://github.com/faraysz/WebsiteAdmin-ADEK","urlText":"Buka Website / Repositori ADEK"}'>
+            <div class="project-card__thumb">
+              <div class="project-card__thumb-bg" style="background: radial-gradient(circle at center, rgba(16, 185, 129, 0.25) 0%, transparent 70%);"></div>
+              <div class="project-card__mockup">
+                <div class="mockup-mini-header">
+                  <div class="mockup-mini-dots"><span></span><span></span><span></span></div>
+                  <span class="mockup-mini-status" style="color:var(--emerald);">● Midtrans Paid</span>
+                </div>
+                <div class="mockup-mini-grid">
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">1.850</div>
+                    <div class="mockup-mini-lbl">Target Kkal</div>
+                  </div>
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">Terverifikasi</div>
+                    <div class="mockup-mini-lbl">Status Bayar</div>
+                  </div>
+                </div>
               </div>
-              <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">ADEK: Backend Website &amp; API</h2>
-              <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-                Sistem backend berbasis Laravel REST API untuk monitoring diet. Menyediakan sistem autentikasi,
-                manajemen data gizi, dan integrasi payment gateway yang aman.
-              </p>
             </div>
-            <div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap; margin:16px 0 20px;">
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge" style="color:var(--emerald);">Web &amp; Payment</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">ADEK: Backend Website &amp; API</h3>
+              <p class="project-card__desc">
+                Sistem backend berbasis Laravel REST API untuk monitoring diet. Menyediakan sistem autentikasi, manajemen data gizi, dan integrasi payment gateway yang aman.
+              </p>
+              <div class="project-card__tags">
                 <span class="tag">Laravel</span>
-                <span class="tag">REST API</span>
-                <span class="tag">Payment Gateway</span>
+                <span class="tag">Midtrans Gateway</span>
                 <span class="tag">MySQL</span>
               </div>
-              <a href="https://github.com/faraysz/WebsiteAdmin-ADEK" target="_blank" rel="noopener"
-                class="btn btn--ghost"
-                style="padding:8px 16px; font-size:13px; width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-github">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                Tinjau di GitHub
-              </a>
+              <div class="project-card__action">
+                <span>Klik untuk detail lengkap</span>
+                <div class="project-card__action-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 3. QRDeviceManagerMobile -->
-          <article class="project-item" data-category="mobile">
-            <div>
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                <span class="tag tag--emerald">Open Source</span>
-                <span style="font-size:12px; color:var(--text-faint);">Flutter</span>
+          <article class="project-card" data-category="mobile" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Buka detail proyek QRDeviceManagerMobile" data-project-details='{"title":"QRDeviceManagerMobile: Tracking Aset Lab","badge":"Mobile &amp; QR Code Tracking","year":"2024","desc":"Aplikasi mobile lintas platform untuk digitalisasi inventarisasi dan pelacakan riwayat peminjaman perangkat laboratorium menggunakan teknologi pemindaian QR Code.","challenge":"Pencatatan peminjaman alat lab sering dilakukan manual di buku kertas, mengakibatkan alat hilang atau sulit dilacak siapa yang meminjam dan kapan jadwal pengembaliannya.","features":["Pemindai QR Code cepat menggunakan kamera HP untuk verifikasi aset secara instan.","Pencatatan riwayat check-in &amp; check-out barang lab secara otomatis dan terstruktur.","Manajemen status ketersediaan alat (Tersedia, Dipinjam, Dalam Perbaikan).","Dukungan multi-platform dengan framework Flutter yang ringan dan responsif."],"tags":["Flutter","Dart","QR Scanner","TypeScript","REST API"],"url":"https://github.com/faraysz/QRDeviceManagerMobile","urlText":"Buka Repositori QRDeviceManager"}'>
+            <div class="project-card__thumb">
+              <div class="project-card__thumb-bg" style="background: radial-gradient(circle at center, rgba(245, 158, 11, 0.25) 0%, transparent 70%);"></div>
+              <div class="project-card__mockup">
+                <div class="mockup-mini-header">
+                  <div class="mockup-mini-dots"><span></span><span></span><span></span></div>
+                  <span class="mockup-mini-status" style="color:var(--amber);">● Scanner Ready</span>
+                </div>
+                <div class="mockup-mini-grid">
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">LAB-QR09</div>
+                    <div class="mockup-mini-lbl">Asset Code</div>
+                  </div>
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">Verified</div>
+                    <div class="mockup-mini-lbl">Status Aset</div>
+                  </div>
+                </div>
               </div>
-              <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">QRDeviceManagerMobile</h2>
-              <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-                Sistem tracking dan inventarisasi perangkat laboratorium berbasis mobile dengan pemindai QR Code untuk
-                pencatatan riwayat peminjaman aset.
-              </p>
             </div>
-            <div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap; margin:16px 0 20px;">
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge" style="color:var(--amber);">Mobile &amp; QR Code</span>
+                <span class="project-card__year">2024</span>
+              </div>
+              <h3 class="project-card__title">QRDeviceManagerMobile</h3>
+              <p class="project-card__desc">
+                Sistem tracking dan inventarisasi perangkat laboratorium berbasis mobile dengan pemindai QR Code untuk pencatatan riwayat peminjaman aset.
+              </p>
+              <div class="project-card__tags">
                 <span class="tag">Flutter</span>
                 <span class="tag">TypeScript</span>
                 <span class="tag">QR Code</span>
               </div>
-              <a href="https://github.com/faraysz/QRDeviceManagerMobile" target="_blank" rel="noopener"
-                class="btn btn--ghost"
-                style="padding:8px 16px; font-size:13px; width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-github">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                Tinjau di GitHub
-              </a>
+              <div class="project-card__action">
+                <span>Klik untuk detail lengkap</span>
+                <div class="project-card__action-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
             </div>
           </article>
 
-          <!-- 4. Sky-Schedule -->
-          <article class="project-item" data-category="web">
-            <div>
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                <span class="tag tag--cyan">Client Web</span>
-                <span style="font-size:12px; color:var(--text-faint);">Sabit Malang</span>
+          <!-- 4. Sky-Schedule Bandara -->
+          <article class="project-card" data-category="web" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Buka detail proyek Sky-Schedule Portal Bandara dan Chatbot" data-project-details='{"title":"Sky-Schedule: Portal Bandara &amp; Chatbot Asisten Interaktif","badge":"Portal Web &amp; Chatbot Asisten","year":"2024","desc":"Website publik bandara yang menyajikan jadwal penerbangan secara akurat dan asisten virtual cerdas untuk menjawab segala pertanyaan calon penumpang pesawat 24 jam.","challenge":"Penumpang sering mengalami kesulitan memantau pembaruan status penerbangan secara langsung, dan antrean panjang di meja informasi sering terjadi hanya untuk menanyakan informasi reguler.","features":["Papan informasi live jadwal kedatangan &amp; keberangkatan pesawat dengan status real-time.","Pencarian cepat penerbangan berdasarkan nomor penerbangan, maskapai, atau kota tujuan.","Chatbot asisten pintar 24 jam yang mampu menjawab tanya-jawab seputar bagasi, check-in, dan gate.","Panel admin kelola jadwal bagi staf operasional dengan otentikasi data yang aman."],"tags":["Laravel","JavaScript","Chatbot Engine","MySQL","Tailwind CSS"],"url":"https://github.com/faraysz/Sky-Schedule","urlText":"Buka Website / Repositori Sky-Schedule"}'>
+            <div class="project-card__thumb">
+              <div class="project-card__thumb-bg" style="background: radial-gradient(circle at center, rgba(167, 139, 250, 0.25) 0%, transparent 70%);"></div>
+              <div class="project-card__mockup">
+                <div class="mockup-mini-header">
+                  <div class="mockup-mini-dots"><span></span><span></span><span></span></div>
+                  <span class="mockup-mini-status" style="color:var(--violet);">● Airport Live</span>
+                </div>
+                <div class="mockup-mini-grid">
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">GA-204</div>
+                    <div class="mockup-mini-lbl">On Time · Gate 3</div>
+                  </div>
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">Chatbot</div>
+                    <div class="mockup-mini-lbl">Asisten Aktif</div>
+                  </div>
+                </div>
               </div>
-              <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">Sky-Schedule Bandara</h2>
-              <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-                Portal web layanan jadwal keberangkatan dan kedatangan pesawat bandara Sabit Malang, terintegrasi
-                chatbot asistensi interaktif untuk kemudahan penumpang.
-              </p>
             </div>
-            <div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap; margin:16px 0 20px;">
-                <span class="tag">Laravel</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Chatbot</span>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge" style="color:var(--violet);">Web &amp; Chatbot</span>
+                <span class="project-card__year">2024</span>
               </div>
-              <a href="https://github.com/faraysz/Sky-Schedule" target="_blank" rel="noopener" class="btn btn--ghost"
-                style="padding:8px 16px; font-size:13px; width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-github">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                Tinjau di GitHub
-              </a>
+              <h3 class="project-card__title">Sky-Schedule Bandara</h3>
+              <p class="project-card__desc">
+                Portal web layanan jadwal keberangkatan &amp; kedatangan pesawat bandara Sabit Malang, terintegrasi chatbot cerdas untuk asistensi penumpang 24 jam.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">Chatbot Engine</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__action">
+                <span>Klik untuk detail lengkap</span>
+                <div class="project-card__action-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 5. D-Kost Desktop -->
-          <article class="project-item" data-category="desktop">
-            <div>
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                <span class="tag tag--violet">Desktop Java</span>
-                <span style="font-size:12px; color:var(--text-faint);">Desktop</span>
+          <article class="project-card" data-category="desktop" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Buka detail proyek D-Kost Desktop Application" data-project-details='{"title":"D-Kost: Manajemen Kamar &amp; Penghuni Kos","badge":"Desktop Java &amp; Software QA","year":"2024","desc":"Aplikasi desktop berbasis Java NetBeans dan MySQL untuk administrasi kos terpadu, dilengkapi pengujian mutu perangkat lunak komprehensif.","challenge":"Pengelola kos-kosan sering mengalami selisih data kamar kosong, keterlambatan pembayaran sewa bulanan, dan kehilangan riwayat identitas penyewa saat menggunakan pembukuan kertas manual.","features":["Pencatatan data kamar, tipe fasilitas, harga sewa, dan status okupansi (Kosong/Terisi).","Manajemen biodata penghuni lengkap dengan tanggal masuk dan jatuh tempo pembayaran.","Penerbitan kwitansi pembayaran dan rekapitulasi pemasukan bulanan otomatis.","Diuji secara menyeluruh dengan metode Black-Box Testing dan Regression Testing untuk keandalan maksimal."],"tags":["Java","Swing GUI","MySQL","Black-Box Testing","NetBeans"],"url":"https://github.com/faraysz/D-Kost_Desktop","urlText":"Buka Repositori D-Kost Desktop"}'>
+            <div class="project-card__thumb">
+              <div class="project-card__thumb-bg" style="background: radial-gradient(circle at center, rgba(59, 130, 246, 0.25) 0%, transparent 70%);"></div>
+              <div class="project-card__mockup">
+                <div class="mockup-mini-header">
+                  <div class="mockup-mini-dots"><span></span><span></span><span></span></div>
+                  <span class="mockup-mini-status" style="color:#60a5fa;">● Java Swing UI</span>
+                </div>
+                <div class="mockup-mini-grid">
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">12 / 15</div>
+                    <div class="mockup-mini-lbl">Kamar Terisi</div>
+                  </div>
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">Lunas</div>
+                    <div class="mockup-mini-lbl">Status Sewa</div>
+                  </div>
+                </div>
               </div>
-              <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">D-Kost Desktop Application</h2>
-              <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-                Aplikasi desktop berbasis Java NetBeans dan MySQL untuk pencatatan kamar dan penghuni kos. Dilanjutkan
-                dengan rangkaian pengujian mutu perangkat lunak (black-box &amp; regression testing).
-              </p>
             </div>
-            <div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap; margin:16px 0 20px;">
-                <span class="tag">Java</span>
-                <span class="tag">Swing</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">QA Black-Box</span>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge" style="color:#60a5fa;">Desktop &amp; QA</span>
+                <span class="project-card__year">2024</span>
               </div>
-              <a href="https://github.com/faraysz/D-Kost_Desktop" target="_blank" rel="noopener" class="btn btn--ghost"
-                style="padding:8px 16px; font-size:13px; width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-github">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                Tinjau di GitHub
-              </a>
+              <h3 class="project-card__title">D-Kost Desktop Application</h3>
+              <p class="project-card__desc">
+                Aplikasi desktop berbasis Java NetBeans dan MySQL untuk pencatatan kamar dan penghuni kos, disertai pengujian mutu black-box &amp; regression.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Java</span>
+                <span class="tag">Swing GUI</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="project-card__action">
+                <span>Klik untuk detail lengkap</span>
+                <div class="project-card__action-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
             </div>
           </article>
 
-          <!-- 6. Maw Bouquet QA -->
-          <article class="project-item" data-category="desktop">
-            <div>
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                <span class="tag tag--violet">Testing Suite</span>
-                <span style="font-size:12px; color:var(--text-faint);">QA</span>
+          <!-- 6. Maw Bouquet QA Automation -->
+          <article class="project-card" data-category="desktop" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Buka detail proyek Maw Bouquet QA Automation" data-project-details='{"title":"Maw Bouquet: Automation Testing Suite","badge":"Automated QA &amp; Testing Suite","year":"2024","desc":"Rangkaian automasi pengujian menggunakan Selenium WebDriver dan Mocha JavaScript untuk validasi keandalan alur checkout e-commerce secara otomatis.","challenge":"Pengujian manual pada website e-commerce memakan waktu lama saat ada rilis fitur baru, serta rentan terhadap human error saat menguji puluhan skenario checkout, kupon diskon, dan validasi formulir pembayaran.","features":["Skrip end-to-end testing otomatis mensimulasikan alur pengguna dari memilih produk hingga checkout.","Automated regression suite untuk memastikan fitur lama tidak rusak akibat update kode baru.","Framework pelaporan pengujian otomatis (HTML pass/fail test report) yang mudah dibaca tim engineer.","Integrasi Mocha test runner &amp; Chai assertion library untuk validasi data presisi tinggi."],"tags":["Selenium WebDriver","Mocha JS","Chai Assertion","Automated QA","E-Commerce"],"url":"https://github.com/faraysz","urlText":"Kunjungi Repositori GitHub"}'>
+            <div class="project-card__thumb">
+              <div class="project-card__thumb-bg" style="background: radial-gradient(circle at center, rgba(16, 185, 129, 0.25) 0%, transparent 70%);"></div>
+              <div class="project-card__mockup">
+                <div class="mockup-mini-header">
+                  <div class="mockup-mini-dots"><span></span><span></span><span></span></div>
+                  <span class="mockup-mini-status" style="color:var(--emerald);">● 24/24 Passed</span>
+                </div>
+                <div class="mockup-mini-grid">
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">100%</div>
+                    <div class="mockup-mini-lbl">Test Coverage</div>
+                  </div>
+                  <div class="mockup-mini-box">
+                    <div class="mockup-mini-val">0.42s</div>
+                    <div class="mockup-mini-lbl">Avg Exec Time</div>
+                  </div>
+                </div>
               </div>
-              <h2 style="font-size:19px; color:var(--text); margin-bottom:8px;">Maw Bouquet: QA Automation</h2>
-              <p style="font-size:14px; line-height:1.65; color:var(--text-dim);">
-                Rangkaian automasi pengujian menggunakan Selenium WebDriver dan Mocha JavaScript untuk validasi alur
-                checkout e-commerce dan pelaporan otomatis pass/fail.
-              </p>
             </div>
-            <div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap; margin:16px 0 20px;">
-                <span class="tag">Selenium</span>
-                <span class="tag">Mocha</span>
-                <span class="tag">Automation QA</span>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge" style="color:var(--emerald);">Testing Suite</span>
+                <span class="project-card__year">2024</span>
               </div>
-              <a href="https://github.com/faraysz" target="_blank" rel="noopener" class="btn btn--ghost"
-                style="padding:8px 16px; font-size:13px; width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-github">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                Tinjau di GitHub
-              </a>
+              <h3 class="project-card__title">Maw Bouquet: QA Automation</h3>
+              <p class="project-card__desc">
+                Rangkaian automasi pengujian menggunakan Selenium WebDriver dan Mocha JavaScript untuk validasi alur checkout e-commerce dan pelaporan otomatis pass/fail.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Selenium</span>
+                <span class="tag">Mocha JS</span>
+                <span class="tag">QA Automation</span>
+              </div>
+              <div class="project-card__action">
+                <span>Klik untuk detail lengkap</span>
+                <div class="project-card__action-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
             </div>
           </article>
 
         </div>
       </div>
     </section>
+
+    <!-- ==================== MODAL DETAIL PROYEK ==================== -->
+    <div class="project-modal" id="projectDetailModal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="project-modal__dialog">
+        <button class="project-modal__close" aria-label="Tutup jendela detail">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <div class="project-modal__scroll">
+          <div class="project-modal__badge-row">
+            <span class="tag tag--cyan modal-target-badge">Kategori</span>
+            <span style="font-family:var(--font-mono); font-size:12px; color:var(--text-faint);" class="modal-target-year">2024</span>
+          </div>
+          <h2 class="project-modal__title modal-target-title">Judul Proyek</h2>
+          <p class="project-modal__desc modal-target-desc"></p>
+
+          <div class="project-modal__section">
+            <span class="project-modal__section-title">Masalah / Tantangan yang Diselesaikan</span>
+            <p class="project-modal__desc modal-target-challenge" style="font-size:14px;"></p>
+          </div>
+
+          <div class="project-modal__section">
+            <span class="project-modal__section-title">Fitur &amp; Keunggulan Utama</span>
+            <ul class="project-modal__features modal-target-features"></ul>
+          </div>
+
+          <div class="project-modal__section">
+            <span class="project-modal__section-title">Teknologi yang Digunakan</span>
+            <div class="project-modal__tags modal-target-tags"></div>
+          </div>
+        </div>
+        <div class="project-modal__footer">
+          <button type="button" class="btn btn--ghost" data-modal-close style="font-size:13px; padding:9px 18px;">Tutup</button>
+          <a href="#" target="_blank" rel="noopener" class="btn btn--primary modal-target-link" style="font-size:13px; padding:9px 20px;">
+            Buka Link Website
+          </a>
+        </div>
+      </div>
+    </div>
 
   </main>
 
