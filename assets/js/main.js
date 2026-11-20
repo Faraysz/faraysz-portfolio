@@ -325,4 +325,87 @@ Balas ke: ${email}
       });
     });
   }
+
+  /* --- Interactive Project Modal --- */
+  const interactiveCards = document.querySelectorAll('.project-card[data-project-details]');
+  const projectModal = document.querySelector('#projectDetailModal');
+
+  if (interactiveCards.length && projectModal) {
+    const modalTitle = projectModal.querySelector('.modal-target-title');
+    const modalBadge = projectModal.querySelector('.modal-target-badge');
+    const modalYear = projectModal.querySelector('.modal-target-year');
+    const modalDesc = projectModal.querySelector('.modal-target-desc');
+    const modalChallenge = projectModal.querySelector('.modal-target-challenge');
+    const modalFeatures = projectModal.querySelector('.modal-target-features');
+    const modalTags = projectModal.querySelector('.modal-target-tags');
+    const modalLink = projectModal.querySelector('.modal-target-link');
+    const closeBtn = projectModal.querySelector('.project-modal__close');
+    const dismissBtns = projectModal.querySelectorAll('[data-modal-close]');
+
+    let lastFocusedEl = null;
+
+    const openModal = (card) => {
+      lastFocusedEl = card;
+      let data = {};
+      try {
+        data = JSON.parse(card.getAttribute('data-project-details') || '{}');
+      } catch (err) {
+        console.error('Failed to parse project details:', err);
+      }
+
+      if (modalTitle) modalTitle.textContent = data.title || card.querySelector('.project-card__title')?.textContent || '';
+      if (modalBadge) modalBadge.textContent = data.badge || '';
+      if (modalYear) modalYear.textContent = data.year || '';
+      if (modalDesc) modalDesc.textContent = data.desc || '';
+      if (modalChallenge) modalChallenge.textContent = data.challenge || '';
+
+      if (modalFeatures && Array.isArray(data.features)) {
+        modalFeatures.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+      }
+
+      if (modalTags && Array.isArray(data.tags)) {
+        modalTags.innerHTML = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
+      }
+
+      if (modalLink) {
+        modalLink.href = data.url || '#';
+        modalLink.innerHTML = `${data.urlText || 'Buka Link Website'} <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link" style="margin-left:6px; vertical-align:middle;"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`;
+      }
+
+      projectModal.classList.add('is-open');
+      projectModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    };
+
+    const closeModal = () => {
+      projectModal.classList.remove('is-open');
+      projectModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocusedEl) lastFocusedEl.focus();
+    };
+
+    interactiveCards.forEach(card => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    dismissBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectModal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+  }
 });
