@@ -201,17 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* --- Interactive Playful Cats (Mood Ref: superti4r.net) --- */
-  const catItems = document.querySelectorAll('.hero-cat-item');
-  catItems.forEach((cat) => {
-    cat.addEventListener('click', () => {
-      cat.style.transform = 'translateY(-12px) scale(1.15)';
-      setTimeout(() => {
-        cat.style.transform = '';
-      }, 320);
-    });
-  });
-
   /* --- Form contact: kirim via EmailJS; kalau config belum diisi, fallback WhatsApp --- */
   const form = document.querySelector('[data-contact-form]');
   if (form) {

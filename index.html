@@ -73,17 +73,6 @@
       padding: 0;
     }
 
-    .hero-greeting {
-      font-family: 'Caveat', cursive, var(--font-body);
-      font-size: clamp(23px, 3.2vw, 30px);
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.78);
-      margin-bottom: 12px;
-      letter-spacing: 0.02em;
-      transform: rotate(-1.5deg);
-      user-select: none;
-    }
-
     .hero-headline {
       font-family: var(--font-display);
       font-size: clamp(32px, 5.2vw, 56px);
@@ -145,7 +134,7 @@
       line-height: 1.78;
       color: rgba(255, 255, 255, 0.72);
       max-width: 640px;
-      margin: 0 auto 30px;
+      margin: 0 auto 32px;
       text-align: center;
       text-wrap: pretty;
     }
@@ -169,87 +158,7 @@
       align-items: center;
       justify-content: center;
       margin-top: 0;
-      margin-bottom: 28px;
-    }
-
-    .hero-pills {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--text-dim);
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .status-dot {
-      width: 7.5px;
-      height: 7.5px;
-      border-radius: 50%;
-      background-color: #10b981;
-      box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
-      display: inline-block;
-    }
-
-    .hero-pill-sep {
-      color: rgba(255, 255, 255, 0.22);
-      font-size: 11px;
-    }
-
-    /* Deretan Kucing Estetik (Visual Ref: superti4r.net) */
-    .hero-cats-bar {
-      width: 100%;
-      max-width: 720px;
-      margin: 36px auto 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      gap: clamp(6px, 2vw, 22px);
-      opacity: 0.94;
-      user-select: none;
-    }
-
-    .hero-cat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    .hero-cat-item:hover {
-      transform: translateY(-8px) scale(1.06);
-    }
-
-    .cat-svg {
-      display: block;
-      transition: transform 0.25s ease;
-      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
-    }
-
-    @media (max-width: 600px) {
-      .hero-cats-bar {
-        gap: 4px;
-        margin-top: 24px;
-      }
-
-      .hero-cat-item:nth-child(1),
-      .hero-cat-item:nth-child(6) {
-        display: none;
-      }
-
-      .cat-svg {
-        transform: scale(0.88);
-        transform-origin: bottom center;
-      }
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -292,9 +201,6 @@
 
       <div class="hero-container">
         <div class="hero-content reveal is-visible">
-          <!-- Handwritten Greeting santai ala superti4r.net -->
-          <div class="hero-greeting" aria-hidden="true">Hello, you found me.</div>
-
           <!-- Headline Terpusat & Fokus ke Faraysz + Efek Typewriter -->
           <h1 class="hero-headline" aria-label="Hai, saya Faraysz. Selamat datang di ruang digital saya.">
             Hai, saya <span class="hero-name-accent">Faraysz</span>.<br>
@@ -326,141 +232,6 @@
               </svg>Ngobrol Santai
             </a>
           </div>
-
-          <!-- Micro Pills Status -->
-          <div class="hero-pills">
-            <span class="hero-pill"><span class="status-dot"></span> Terbuka untuk Kolaborasi &amp; Proyek</span>
-            <span class="hero-pill-sep">•</span>
-            <span class="hero-pill">Fullstack Web &amp; Mobile</span>
-            <span class="hero-pill-sep">•</span>
-            <span class="hero-pill">Indonesia</span>
-          </div>
-
-          <!-- Ilustrasi Deretan Kucing Lucu (Inspirasi: superti4r.net) -->
-          <div class="hero-cats-bar" aria-hidden="true" title="Meow! Selamat datang di web Faraysz">
-            <!-- Kucing 1: Abu-abu duduk menoleh -->
-            <div class="hero-cat-item">
-              <svg width="76" height="66" viewBox="0 0 85 75" fill="none" xmlns="http://www.w3.org/2000/svg" class="cat-svg">
-                <ellipse cx="44" cy="50" rx="26" ry="21" fill="#4b5563" stroke="#1f2937" stroke-width="2.5"/>
-                <path d="M66 58 C 76 60, 80 50, 77 40 C 75 35, 71 36, 73 42" stroke="#4b5563" stroke-width="5" stroke-linecap="round"/>
-                <ellipse cx="32" cy="48" rx="14" ry="16" fill="#f3f4f6"/>
-                <circle cx="28" cy="30" r="18" fill="#4b5563" stroke="#1f2937" stroke-width="2.5"/>
-                <polygon points="15,22 13,8 26,18" fill="#374151" stroke="#1f2937" stroke-width="2.5"/>
-                <polygon points="17,20 16,12 24,18" fill="#fca5a5"/>
-                <polygon points="32,18 42,8 41,23" fill="#374151" stroke="#1f2937" stroke-width="2.5"/>
-                <polygon points="34,19 40,12 39,21" fill="#fca5a5"/>
-                <ellipse cx="22" cy="30" rx="3.5" ry="4" fill="#111827"/>
-                <circle cx="21" cy="28.5" r="1.2" fill="#ffffff"/>
-                <ellipse cx="33" cy="29" rx="3.5" ry="4" fill="#111827"/>
-                <circle cx="32" cy="27.5" r="1.2" fill="#ffffff"/>
-                <polygon points="26,34 29,34 27.5,36" fill="#f472b6"/>
-                <path d="M25 37 Q27.5 39 30 37" stroke="#111827" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-
-            <!-- Kucing 2: Oranye Belang Rebahan Santai -->
-            <div class="hero-cat-item">
-              <svg width="105" height="66" viewBox="0 0 115 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="cat-svg">
-                <ellipse cx="58" cy="46" rx="38" ry="20" fill="#f59e0b" stroke="#78350f" stroke-width="2.5"/>
-                <path d="M42 33 Q46 39 40 45" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M56 31 Q60 38 54 46" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M70 33 Q74 40 68 47" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M92 48 C 106 50, 110 38, 104 30 C 100 25, 96 28, 99 34" stroke="#f59e0b" stroke-width="5.5" stroke-linecap="round"/>
-                <circle cx="28" cy="40" r="17" fill="#f59e0b" stroke="#78350f" stroke-width="2.5"/>
-                <polygon points="14,32 10,18 24,27" fill="#d97706" stroke="#78350f" stroke-width="2.5"/>
-                <polygon points="16,30 14,22 22,27" fill="#fbcfe8"/>
-                <polygon points="30,26 42,16 41,31" fill="#d97706" stroke="#78350f" stroke-width="2.5"/>
-                <polygon points="32,27 39,20 39,29" fill="#fbcfe8"/>
-                <ellipse cx="23" cy="41" rx="3.2" ry="3.8" fill="#111827"/>
-                <circle cx="22" cy="39.5" r="1" fill="#ffffff"/>
-                <ellipse cx="33" cy="41" rx="3.2" ry="3.8" fill="#111827"/>
-                <circle cx="32" cy="39.5" r="1" fill="#ffffff"/>
-                <polygon points="27,45 29.5,45 28.2,47" fill="#ef4444"/>
-                <path d="M26 47 Q28 49 30 47" stroke="#78350f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-
-            <!-- Kucing 3: Belang Calico (Putih Cokelat) Ceria -->
-            <div class="hero-cat-item">
-              <svg width="105" height="74" viewBox="0 0 115 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="cat-svg">
-                <ellipse cx="58" cy="52" rx="36" ry="22" fill="#fef3c7" stroke="#374151" stroke-width="2.5"/>
-                <path d="M72 36 C84 40, 88 56, 76 62 Z" fill="#d97706"/>
-                <path d="M38 42 C44 48, 40 60, 32 58 Z" fill="#4b5563"/>
-                <circle cx="28" cy="35" r="18" fill="#fef3c7" stroke="#374151" stroke-width="2.5"/>
-                <path d="M16 28 C20 18, 28 20, 26 34 Z" fill="#d97706"/>
-                <polygon points="14,25 10,12 24,20" fill="#b45309" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="31,20 44,12 42,26" fill="#4b5563" stroke="#374151" stroke-width="2.5"/>
-                <ellipse cx="22" cy="35" rx="3.5" ry="4" fill="#111827"/>
-                <circle cx="21" cy="33.5" r="1.2" fill="#ffffff"/>
-                <ellipse cx="34" cy="35" rx="3.5" ry="4" fill="#111827"/>
-                <circle cx="33" cy="33.5" r="1.2" fill="#ffffff"/>
-                <polygon points="27,39 29.5,39 28.2,41" fill="#ec4899"/>
-                <ellipse cx="28.2" cy="44" rx="2.5" ry="2" fill="#ef4444"/>
-              </svg>
-            </div>
-
-            <!-- Kucing 4: Kucing Putih Tinggi Duduk di Tengah dengan Ekor Melengkung -->
-            <div class="hero-cat-item">
-              <svg width="95" height="88" viewBox="0 0 100 95" fill="none" xmlns="http://www.w3.org/2000/svg" class="cat-svg">
-                <path d="M64 80 C 82 82, 88 50, 70 32 C 60 22, 54 30, 58 38 C 62 44, 70 48, 62 74" stroke="#e5e7eb" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M64 80 C 82 82, 88 50, 70 32 C 60 22, 54 30, 58 38 C 62 44, 70 48, 62 74" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" fill="none"/>
-                <ellipse cx="46" cy="62" rx="22" ry="26" fill="#f9fafb" stroke="#374151" stroke-width="2.5"/>
-                <circle cx="46" cy="34" r="19" fill="#f9fafb" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="31,24 26,8 41,17" fill="#f9fafb" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="33,22 29,13 39,18" fill="#fbcfe8"/>
-                <polygon points="51,17 65,8 60,24" fill="#f9fafb" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="53,18 62,13 58,22" fill="#fbcfe8"/>
-                <ellipse cx="39" cy="34" rx="3.5" ry="4.5" fill="#111827"/>
-                <circle cx="38" cy="32.5" r="1.3" fill="#ffffff"/>
-                <ellipse cx="53" cy="34" rx="3.5" ry="4.5" fill="#111827"/>
-                <circle cx="52" cy="32.5" r="1.3" fill="#ffffff"/>
-                <polygon points="45,39 47.5,39 46.2,41" fill="#f472b6"/>
-                <path d="M43 43 Q46 45 49 43" stroke="#374151" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-
-            <!-- Kucing 5: Kucing Tuxedo Hitam Putih -->
-            <div class="hero-cat-item">
-              <svg width="85" height="78" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg" class="cat-svg">
-                <ellipse cx="45" cy="58" rx="24" ry="22" fill="#1f2937" stroke="#111827" stroke-width="2.5"/>
-                <path d="M45 45 C40 54, 38 68, 45 78 C52 68, 50 54, 45 45 Z" fill="#f9fafb"/>
-                <circle cx="45" cy="32" r="18" fill="#1f2937" stroke="#111827" stroke-width="2.5"/>
-                <polygon points="30,22 24,7 39,16" fill="#1f2937" stroke="#111827" stroke-width="2.5"/>
-                <polygon points="32,20 27,12 37,17" fill="#fbcfe8"/>
-                <polygon points="51,16 66,7 60,22" fill="#1f2937" stroke="#111827" stroke-width="2.5"/>
-                <polygon points="53,17 62,12 58,20" fill="#fbcfe8"/>
-                <path d="M37 36 L45 44 L53 36 L49 26 L41 26 Z" fill="#f9fafb"/>
-                <ellipse cx="38" cy="32" rx="3.5" ry="4.2" fill="#38bdf8"/>
-                <circle cx="38" cy="32" r="2" fill="#111827"/>
-                <circle cx="37" cy="30.5" r="0.9" fill="#ffffff"/>
-                <ellipse cx="52" cy="32" rx="3.5" ry="4.2" fill="#38bdf8"/>
-                <circle cx="52" cy="32" r="2" fill="#111827"/>
-                <circle cx="51" cy="30.5" r="0.9" fill="#ffffff"/>
-                <polygon points="44,38 46,38 45,39.5" fill="#f472b6"/>
-              </svg>
-            </div>
-
-            <!-- Kucing 6: Kucing Belang Abu-abu Loreng -->
-            <div class="hero-cat-item">
-              <svg width="78" height="74" viewBox="0 0 85 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="cat-svg">
-                <ellipse cx="44" cy="54" rx="22" ry="22" fill="#9ca3af" stroke="#374151" stroke-width="2.5"/>
-                <path d="M32 46 Q38 49 34 54" stroke="#4b5563" stroke-width="2" stroke-linecap="round"/>
-                <path d="M56 46 Q50 49 54 54" stroke="#4b5563" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="44" cy="30" r="17" fill="#9ca3af" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="30,22 25,8 39,16" fill="#6b7280" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="32,20 28,12 37,17" fill="#fbcfe8"/>
-                <polygon points="49,16 63,8 58,22" fill="#6b7280" stroke="#374151" stroke-width="2.5"/>
-                <polygon points="51,17 60,12 56,20" fill="#fbcfe8"/>
-                <ellipse cx="38" cy="30" rx="3.2" ry="3.8" fill="#111827"/>
-                <circle cx="37" cy="28.5" r="1" fill="#ffffff"/>
-                <ellipse cx="50" cy="30" rx="3.2" ry="3.8" fill="#111827"/>
-                <circle cx="49" cy="28.5" r="1" fill="#ffffff"/>
-                <polygon points="43,34 45,34 44,35.5" fill="#ec4899"/>
-                <path d="M42 36 Q44 38 46 36" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
