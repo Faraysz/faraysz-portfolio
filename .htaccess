@@ -1,1 +1,12 @@
-AddHandler application/x-httpd-php80 .php
+# Clean URLs
+RewriteEngine On
+
+# Redirect /projects.html or /projects to /proyek
+RewriteRule ^projects(\.html)?/?$ /proyek [R=301,L]
+RewriteRule ^about(\.html)?/?$ /tentang [R=301,L]
+RewriteRule ^contact(\.html)?/?$ /kontak [R=301,L]
+
+# Clean URL resolution
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

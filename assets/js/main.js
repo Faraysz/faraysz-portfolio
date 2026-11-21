@@ -2,6 +2,35 @@
    MAIN.JS — interaksi ringan, tanpa dependency eksternal
    ========================================================================== */
 
+/* --- Clean URL Route Normalizer (/proyek, /stack, /tentang, /kontak) --- */
+(function cleanUrlRouting() {
+  try {
+    const path = window.location.pathname;
+    let newPath = path;
+
+    // Normalisasi file .html dan route lama ke route bersih
+    if (path.endsWith('/index.html') || path.endsWith('/index')) {
+      newPath = path.replace(/\/index(\.html)?$/, '/');
+    } else if (path.endsWith('/projects.html') || path.endsWith('/proyek.html') || path.endsWith('/projects')) {
+      newPath = path.replace(/\/(projects|proyek)(\.html)?$/, '/proyek');
+    } else if (path.endsWith('/stack.html')) {
+      newPath = path.replace(/\/stack\.html$/, '/stack');
+    } else if (path.endsWith('/about.html') || path.endsWith('/tentang.html') || path.endsWith('/about')) {
+      newPath = path.replace(/\/(about|tentang)(\.html)?$/, '/tentang');
+    } else if (path.endsWith('/contact.html') || path.endsWith('/kontak.html') || path.endsWith('/contact')) {
+      newPath = path.replace(/\/(contact|kontak)(\.html)?$/, '/kontak');
+    } else if (path.endsWith('.html')) {
+      newPath = path.replace(/\.html$/, '');
+    }
+
+    if (newPath !== path) {
+      window.history.replaceState(null, '', newPath + window.location.search + window.location.hash);
+    }
+  } catch (e) {
+    // Abaikan jika tidak didukung environment
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Tandai link nav aktif berdasarkan halaman --- */

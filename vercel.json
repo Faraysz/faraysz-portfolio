@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/proyek", "destination": "/projects.html" },
+    { "source": "/stack", "destination": "/stack.html" },
+    { "source": "/tentang", "destination": "/about.html" },
+    { "source": "/kontak", "destination": "/contact.html" }
+  ]
+}
