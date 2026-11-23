@@ -13,8 +13,8 @@
       newPath = path.replace(/\/index(\.html)?$/, '/');
     } else if (path.endsWith('/projects.html') || path.endsWith('/proyek.html') || path.endsWith('/projects')) {
       newPath = path.replace(/\/(projects|proyek)(\.html)?$/, '/proyek');
-    } else if (path.endsWith('/stack.html')) {
-      newPath = path.replace(/\/stack\.html$/, '/stack');
+    } else if (path.endsWith('/stack.html') || path.endsWith('/teknologi.html') || path.endsWith('/stack') || path.endsWith('/teknologi')) {
+      newPath = path.replace(/\/(stack|teknologi)(\.html)?$/, '/teknologi');
     } else if (path.endsWith('/about.html') || path.endsWith('/tentang.html') || path.endsWith('/about')) {
       newPath = path.replace(/\/(about|tentang)(\.html)?$/, '/tentang');
     } else if (path.endsWith('/contact.html') || path.endsWith('/kontak.html') || path.endsWith('/contact')) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- Tandai link nav aktif berdasarkan halaman --- */
   const page = document.body.dataset.page;
   document.querySelectorAll('[data-nav]').forEach((link) => {
-    if (link.dataset.nav === page) link.classList.add('is-active');
+    if (link.dataset.nav === page || ((page === 'stack' || page === 'teknologi') && (link.dataset.nav === 'stack' || link.dataset.nav === 'teknologi'))) link.classList.add('is-active');
   });
 
   /* --- Toggle nav mobile --- */
