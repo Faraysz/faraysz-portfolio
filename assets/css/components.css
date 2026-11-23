@@ -393,17 +393,19 @@
 }
 
 .marquee-tech-item svg {
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
   flex-shrink: 0;
-  opacity: 0.92;
-  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .marquee-tech-item:hover svg {
   opacity: 1;
-  transform: scale(1.12);
-  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.15));
+  color: var(--cyan);
+  transform: scale(1.08);
+  filter: none;
 }
 
 .scrolling-text span.dot {
