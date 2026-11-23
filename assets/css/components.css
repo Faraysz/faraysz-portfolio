@@ -28,15 +28,17 @@
 .navbar__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--space-desktop);
+  position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 859px) {
   .navbar__inner {
+    justify-content: flex-end;
     padding: 0 var(--space-mobile);
   }
 }
@@ -71,10 +73,12 @@
 .navbar__links {
   display: none;
   align-items: center;
-  gap: 28px;
+  justify-content: center;
+  gap: 32px;
   background: none;
   border: none;
   padding: 0;
+  margin: 0 auto;
 }
 
 @media (min-width: 860px) {
@@ -197,6 +201,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
   transform: translateY(-140%);
   transition: transform 0.3s var(--ease);
@@ -208,10 +213,13 @@
 }
 
 .navbar__mobile a {
-  font-size: 15px;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  font-size: 16px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   text-decoration: none;
   transition: color 0.2s var(--ease);
@@ -1310,4 +1318,66 @@
 
 .footer__links a:hover {
   color: #ffffff;
+}
+
+
+/* --- Floating WhatsApp FAB --- */
+.wa-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  text-decoration: none;
+}
+
+.wa-fab:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55), 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.wa-fab:active {
+  transform: scale(0.96);
+}
+
+.wa-fab svg {
+  flex-shrink: 0;
+}
+
+/* --- Mobile-first Responsive Improvements --- */
+@media (max-width: 480px) {
+  .wa-fab {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .wa-fab svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Marquee img icons match svg styling */
+.marquee-tech-item img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  object-fit: contain;
+}
+
+.marquee-tech-item:hover img {
+  opacity: 1;
+  transform: scale(1.08);
 }
